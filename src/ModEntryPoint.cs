@@ -38,13 +38,21 @@ namespace ModBabel
         // ICities.dll instalado, 2026-07-23) - por isso avisos/contadores
         // vão no próprio título do grupo em vez de texto solto.
         //
-        // O Content Manager do CS1 monta a UI de opções de cada mod uma
-        // vez e reaproveita o painel - trocar o idioma aqui não
-        // atualiza na hora as abas de outros mods que já estavam
-        // abertas. Sem conseguir testar em jogo nesta máquina, a forma
-        // confiável conhecida de forçar a reconstrução é fechar e abrir
-        // o Content Manager de novo (ver LanguagePreference.cs para o
-        // histórico de uma tentativa de automatizar isso que causava
+        // Trocar o idioma no dropdown abaixo agora atualiza AO VIVO os
+        // textos já traduzidos que estão na tela, sem precisar fechar
+        // nada nem reiniciar o jogo (ver TranslatedComponentRegistry.cs
+        // pra entender como). Cobre os módulos baseados no
+        // UiTreeTranslator (Play It!, Better Budget, Check Road Access
+        // for Growables, Commuter Destination, Bulldoze It!).
+        //
+        // AINDA precisam reiniciar o jogo pra aplicar: Rainfall (traduz
+        // um dicionário antes da UI ser criada, não sobra componente
+        // pra re-traduzir depois) e os módulos que usam o framework
+        // ModsCommon/AlgernonCommons de outros autores (Advanced Stop
+        // Selection, Building Spawn Points) - esses frameworks têm o
+        // próprio sistema de idioma por baixo, que não sabe que o
+        // ModBabel mudou algo. Ver LanguagePreference.cs pro histórico
+        // completo (inclusive uma tentativa anterior que causava
         // travada e foi revertida).
         public void OnSettingsUI(UIHelperBase helper)
         {
@@ -57,8 +65,7 @@ namespace ModBabel
             grupoApoio.AddButton("LivePix", () => UnityEngine.Application.OpenURL(SupportLinks.LivePix));
             grupoApoio.AddButton("Reportar um bug (GitHub)", () => UnityEngine.Application.OpenURL(GitHubIssuesUrl));
 
-            var group = helper.AddGroup(
-                "ModBabel - Idioma (feche e reabra o Content Manager após trocar)");
+            var group = helper.AddGroup("ModBabel - Idioma");
 
             var idiomas = TranslationEngine.IdiomasDisponiveis();
             var atual = LanguagePreference.IdiomaAtual();

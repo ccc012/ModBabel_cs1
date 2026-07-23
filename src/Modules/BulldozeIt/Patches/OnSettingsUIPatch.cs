@@ -1,5 +1,6 @@
 using System;
 using System.Reflection;
+using ColossalFramework.UI;
 using HarmonyLib;
 using ICities;
 using ModBabel.Core;
@@ -31,25 +32,25 @@ namespace ModBabel.Modules.BulldozeIt.Patches
             var versao = __instance.GetType().Assembly.GetName().Version;
             var group = helper.AddGroup($"Bulldoze It! - {versao.Major}.{versao.Minor}");
 
-            var intervalLabels = new[]
+            var intervalOriginais = new[]
             {
-                Traduzir("End of Day"),
-                Traduzir("End of Month"),
-                Traduzir("End of Year"),
-                Traduzir("Every 5 seconds"),
-                Traduzir("Every 10 seconds"),
-                Traduzir("Every 30 seconds"),
+                "End of Day", "End of Month", "End of Year",
+                "Every 5 seconds", "Every 10 seconds", "Every 30 seconds",
             };
+            var intervalLabels = new string[intervalOriginais.Length];
+            for (var i = 0; i < intervalOriginais.Length; i++)
+                intervalLabels[i] = Traduzir(intervalOriginais[i]);
 
             var interval = t.Property("Interval").GetValue<int>();
             var indiceAtual = Array.IndexOf(IntervalValues, interval);
             if (indiceAtual < 0) indiceAtual = 0;
 
-            group.AddDropdown(Traduzir("Interval"), intervalLabels, indiceAtual, sel =>
+            var dropdownInterval = group.AddDropdown(Traduzir("Interval"), intervalLabels, indiceAtual, sel =>
             {
                 t.Property("Interval").SetValue(IntervalValues[sel]);
                 t.Method("Save").GetValue();
             });
+            TranslatedComponentRegistry.RegistrarDropdown("bulldozeit", dropdownInterval as UIDropDown, intervalOriginais);
 
             var maxBuildings = t.Property("MaxBuildingsPerInterval").GetValue<int>();
             group.AddTextfield(Traduzir("Max Buildings (per interval)"), maxBuildings.ToString(), sel =>
@@ -70,11 +71,12 @@ namespace ModBabel.Modules.BulldozeIt.Patches
         private static void AddCheckbox(UIHelperBase group, Traverse configTraverse, string propriedade, string textoOriginal)
         {
             var valor = configTraverse.Property(propriedade).GetValue<bool>();
-            group.AddCheckbox(Traduzir(textoOriginal), valor, sel =>
+            var checkbox = group.AddCheckbox(Traduzir(textoOriginal), valor, sel =>
             {
                 configTraverse.Property(propriedade).SetValue(sel);
                 configTraverse.Method("Save").GetValue();
             });
+            TranslatedComponentRegistry.RegistrarLabel("bulldozeit", (checkbox as UICheckBox)?.label, textoOriginal);
         }
 
         private static string Traduzir(string texto) =>

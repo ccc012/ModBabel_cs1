@@ -1,4 +1,5 @@
 using System.Reflection;
+using ColossalFramework.UI;
 using HarmonyLib;
 using ICities;
 using ModBabel.Core;
@@ -35,32 +36,40 @@ namespace ModBabel.Modules.PlayIt.Patches
             var group = helper.AddGroup($"Play It! - {versao.Major}.{versao.Minor}");
 
             var mostrarBotao = configTraverse.Property("ShowButton").GetValue<bool>();
-            group.AddCheckbox(
-                TranslationEngine.Traduzir("playit", "Show Button", "Show Button"),
+            const string textoShowButton = "Show Button";
+            var checkboxShowButton = group.AddCheckbox(
+                TranslationEngine.Traduzir("playit", textoShowButton, textoShowButton),
                 mostrarBotao,
                 selecionado =>
                 {
                     configTraverse.Property("ShowButton").SetValue(selecionado);
                     configTraverse.Method("Save").GetValue();
                 });
+            TranslatedComponentRegistry.RegistrarLabel("playit", (checkboxShowButton as UICheckBox)?.label, textoShowButton);
 
             group.AddSpace(10);
 
-            group.AddButton(
-                TranslationEngine.Traduzir("playit", "Reset Positioning of Panel", "Reset Positioning of Panel"),
+            const string textoResetPanel = "Reset Positioning of Panel";
+            var botaoResetPanel = group.AddButton(
+                TranslationEngine.Traduzir("playit", textoResetPanel, textoResetPanel),
                 () => propertiesTraverse.Method("ResetPanelPosition").GetValue());
+            TranslatedComponentRegistry.RegistrarBotao("playit", botaoResetPanel as UIButton, textoResetPanel);
 
             group.AddSpace(10);
 
-            group.AddButton(
-                TranslationEngine.Traduzir("playit", "Reset Positioning of Button", "Reset Positioning of Button"),
+            const string textoResetButton = "Reset Positioning of Button";
+            var botaoResetButton = group.AddButton(
+                TranslationEngine.Traduzir("playit", textoResetButton, textoResetButton),
                 () => propertiesTraverse.Method("ResetButtonPosition").GetValue());
+            TranslatedComponentRegistry.RegistrarBotao("playit", botaoResetButton as UIButton, textoResetButton);
 
             group.AddSpace(10);
 
-            group.AddButton(
-                TranslationEngine.Traduzir("playit", "Reset Positioning of Clock", "Reset Positioning of Clock"),
+            const string textoResetClock = "Reset Positioning of Clock";
+            var botaoResetClock = group.AddButton(
+                TranslationEngine.Traduzir("playit", textoResetClock, textoResetClock),
                 () => propertiesTraverse.Method("ResetClockPosition").GetValue());
+            TranslatedComponentRegistry.RegistrarBotao("playit", botaoResetClock as UIButton, textoResetClock);
 
             return false; // pula o método original - já remontamos a tela traduzida
         }

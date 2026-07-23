@@ -19,6 +19,11 @@ namespace ModBabel.Core
     // inglês como chave de tradução (mesma convenção usada no módulo
     // Rainfall) - itens sem entrada no XML do idioma caem no fallback
     // (mantém o texto original).
+    //
+    // Cada componente traduzido é registrado no
+    // TranslatedComponentRegistry (com o texto ORIGINAL, antes de
+    // traduzir) - é isso que permite trocar de idioma depois com um
+    // clique só, sem reiniciar o jogo (ver TranslatedComponentRegistry).
     public static class UiTreeTranslator
     {
         public static void Traduzir(string moduloId, UIComponent raiz)
@@ -26,20 +31,34 @@ namespace ModBabel.Core
             if (raiz == null) return;
 
             if (raiz is UILabel label && !string.IsNullOrEmpty(label.text))
-                label.text = TranslationEngine.Traduzir(moduloId, label.text, label.text);
+            {
+                var original = label.text;
+                label.text = TranslationEngine.Traduzir(moduloId, original, original);
+                TranslatedComponentRegistry.RegistrarLabel(moduloId, label, original);
+            }
 
             if (raiz is UIButton button && !string.IsNullOrEmpty(button.text))
-                button.text = TranslationEngine.Traduzir(moduloId, button.text, button.text);
+            {
+                var original = button.text;
+                button.text = TranslationEngine.Traduzir(moduloId, original, original);
+                TranslatedComponentRegistry.RegistrarBotao(moduloId, button, original);
+            }
 
             if (!string.IsNullOrEmpty(raiz.tooltip))
-                raiz.tooltip = TranslationEngine.Traduzir(moduloId, raiz.tooltip, raiz.tooltip);
+            {
+                var original = raiz.tooltip;
+                raiz.tooltip = TranslationEngine.Traduzir(moduloId, original, original);
+                TranslatedComponentRegistry.RegistrarTooltip(moduloId, raiz, original);
+            }
 
             if (raiz is UIDropDown dropdown && dropdown.items != null)
             {
+                var itensOriginais = (string[])dropdown.items.Clone();
                 var itens = dropdown.items;
                 for (var i = 0; i < itens.Length; i++)
                     itens[i] = TranslationEngine.Traduzir(moduloId, itens[i], itens[i]);
                 dropdown.items = itens; // reatribuir para a UI atualizar a lista
+                TranslatedComponentRegistry.RegistrarDropdown(moduloId, dropdown, itensOriginais);
             }
 
             foreach (UIComponent filho in raiz.components)
