@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tradução RU do mod Rainfall. Rascunho inicial - aguardando revisão. -->
+<Translations lang="ru">
+
+  <!-- GEN1 -->
+  <String key="General Settings 1">Общие настройки 1</String>
+  <String key="#RainForecast Chirps">#Чирпы прогноза дождя</String>
+  <String key="#Rainfall Chirps">#Чирпы о дожде</String>
+  <String key="Prevent Rain Before Milestone">Предотвратить дождь до достижения цели</String>
+  <String key="Automatic Pipe Laterals">Автоматические ответвления труб</String>
+  <String key="Unowned Tiles Do Not Flood">Некупленные участки не затапливаются</String>
+  <String key="Storm Drain Asset Control">Контроль ливневых стоков</String>
+  <String key="No Control">Без контроля</String>
+  <String key="District Control">Контроль по району</String>
+  <String key="ID Control">Контроль по ID</String>
+  <String key="District Control with ID Override">Контроль по району с переопределением по ID</String>
+  <String key="Gravity Drainage Options">Параметры гравитационного дренажа</String>
+  <String key="Ignore Gravity">Игнорировать гравитацию</String>
+  <String key="Simplified Gravity">Упрощённая гравитация</String>
+  <String key="Advanced Gravity">Продвинутая гравитация</String>
+  <String key="Increase Building Pads">Увеличить основание зданий</String>
+  <String key=" units"> ед.</String>
+  <String key="Inlet Rate Multiplier">Множитель скорости притока</String>
+  <String key="Outlet Rate Multiplier">Множитель скорости оттока</String>
+  <String key="Make it Rain! Intensity">Интенсивность «Устроить дождь!»</String>
+  <String key="Make it Rain!">Устроить дождь!</String>
+
+  <!-- GEN2 -->
+  <String key="General Settings 2">Общие настройки 2</String>
+  <String key="Prevent Building Upgrades from Increased Landvalue due to Rainwater">Предотвратить улучшение зданий из-за роста стоимости земли от дождевой воды</String>
+  <String key="Prev. Upgrade Add. Time">Доп. время предотвр. улучшения</String>
+  <String key=" min"> мин</String>
+  <String key="Min. time btw. storms">Мин. время между штормами</String>
+  <String key="Max. time btw. storms">Макс. время между штормами</String>
+  <String key="Simulate Pollution">Симулировать загрязнение</String>
+  <String key="Prevent Deleting Dam Water Sources">Запретить удаление источников воды плотин</String>
+  <String key="Convert Sully's Water Drain Pipe to SD Outlet">Преобразовать трубу слива Салли в ливневый сток</String>
+  <String key="Reset Weather">Сбросить погоду</String>
+  <String key="Un-Halt All RF Assets">Возобновить все объекты Rainfall</String>
+  <String key="Un-Terminate RF">Отменить завершение Rainfall</String>
+
+  <!-- RO -->
+  <String key="Runoff Settings">Настройки стока</String>
+  <String key="Global Runoff Scalar">Глобальный масштаб стока</String>
+  <String key="Intensity Rate of Change">Скорость изменения интенсивности</String>
+  <String key="Min. Drainage Area RO">Мин. сток зоны дренажа</String>
+  <String key="Max. Drainage Area RO">Макс. сток зоны дренажа</String>
+  <String key="Simulation Tiles">Симулируемые участки</String>
+  <String key="None">Нет</String>
+  <String key="Owned Tiles">Купленные участки</String>
+  <String key="Adjacent Tiles">Соседние участки</String>
+  <String key="Adjacent and Diagonal Tiles">Соседние и диагональные участки</String>
+  <String key="25 Tiles">25 участков</String>
+  <String key="49 Tiles">49 участков</String>
+  <String key="81 Tiles">81 участок</String>
+  <String key="Apply Simulation Tiles Choice">Применить выбор симулируемых участков</String>
+  <String key="Vacant Runoff Coeff.">Коэфф. стока (пустырь)</String>
+  <String key="Default Runoff Coeff.">Коэфф. стока по умолчанию</String>
+  <String key="Flood Spawner Scalar">Масштаб генератора наводнений</String>
+
+  <!-- PUB -->
+  <String key="Public Building Runoff Coefficients">Коэффициенты стока - Общественные здания</String>
+  <String key="Electricity">Электричество</String>
+  <String key="Healthcare">Здравоохранение</String>
+  <String key="Emergency Services">Экстренные службы</String>
+  <String key="Police &amp; Banks">Полиция и банки</String>
+  <String key="Education &amp; Campus">Образование и кампус</String>
+  <String key="Transport">Транспорт</String>
+  <String key="Parks and Plaza">Парки и площади</String>
+  <String key="Unique Buildings">Уникальные здания</String>
+  <String key="Monuments">Памятники</String>
+
+  <!-- PVT -->
+  <String key="Private Building Runoff Coefficients">Коэффициенты стока - Частные здания</String>
+  <String key="Low Density Residential">Жилая застройка низкой плотности</String>
+  <String key="High Density Residential">Жилая застройка высокой плотности</String>
+  <String key="Low Density Commercial">Коммерческая застройка низкой плотности</String>
+  <String key="High Density Commercial">Коммерческая застройка высокой плотности</String>
+  <String key="Office">Офисы</String>
+  <String key="Self Sufficient Resi. Mod.">Модиф. самодостаточного жилья</String>
+  <String key="Tourist/Leisure Mod.">Модиф. туризм/отдых</String>
+  <String key="Organic Commercial Mod.">Модиф. органическая торговля</String>
+  <String key="High Tech Office Mod.">Модиф. высокотех. офис</String>
+  <String key="Financial Office Mod.">Модиф. финансовый офис</String>
+  <String key="Wall-To-Wall Mod.">Модиф. блокированная застройка</String>
+
+  <!-- IND -->
+  <String key="Industrial Building Runoff Coefficients">Коэффициенты стока - Промышленные здания</String>
+  <String key="Industry - General">Промышленность - Общая</String>
+  <String key="Industry - Forest">Промышленность - Лесная</String>
+  <String key="Industry - Agriculture">Промышленность - Сельское хозяйство</String>
+  <String key="Industry - Ore">Промышленность - Руда</String>
+  <String key="Industry - Oil">Промышленность - Нефть</String>
+  <String key="Warehouse">Склад</String>
+  <String key="Garbage">Мусор</String>
+
+  <!-- NTWK -->
+  <String key="Network Runoff Coefficients">Коэффициенты стока - Сети</String>
+  <String key="Roads">Дороги</String>
+  <String key="Pathways">Пешеходные дорожки</String>
+  <String key="Runway">Взлётно-посадочная полоса</String>
+  <String key="Taxiway">Рулёжная дорожка</String>
+  <String key="Train Track">Железнодорожный путь</String>
+  <String key="Metro Track">Путь метро</String>
+  <String key="Monorail Track">Путь монорельса</String>
+
+  <!-- BLDG -->
+  <String key="Building Flood Settings">Настройки затопления зданий</String>
+  <String key="Buildings can be Flooding">Здания могут затапливаться</String>
+  <String key="Building Flooding Tol.">Допуск затопления (здание)</String>
+  <String key="Building Flooding Timer">Таймер затопления (здание)</String>
+  <String key=" seconds"> сек.</String>
+  <String key="Flooding Bldg Efficiency">Эффективность затапливаемого здания</String>
+  <String key=" %"> %</String>
+  <String key="Buildings can be Flooded">Здания могут быть затоплены</String>
+  <String key="Building Flooded Tol.">Допуск затопленного здания</String>
+  <String key="Building Flooded Timer">Таймер затопленного здания</String>
+  <String key="Flooded Bldg Efficiency">Эффективность затопленного здания</String>
+
+  <!-- RDS -->
+  <String key="Roadway Flood Settings">Настройки затопления дорог</String>
+  <String key="Roadways can be Flooding">Дороги могут затапливаться</String>
+  <String key="Roadway Flooding Tol.">Допуск затопления (дорога)</String>
+  <String key="Roadway Flooding Timer">Таймер затопления (дорога)</String>
+  <String key="Roadways can be Flooded">Дороги могут быть затоплены</String>
+  <String key="Roadway Flooded Tol.">Допуск затопленной дороги</String>
+  <String key="Roadway Flooded Timer">Таймер затопленной дороги</String>
+
+  <!-- RLS -->
+  <String key="Railway Flood Settings">Настройки затопления железных дорог</String>
+  <String key="Railways can be Flooding">Железные дороги могут затапливаться</String>
+  <String key="Railway Flooding Tol.">Допуск затопления (ж/д)</String>
+  <String key="Railway Flooding Timer">Таймер затопления (ж/д)</String>
+  <String key="Railways can be Flooded">Железные дороги могут быть затоплены</String>
+  <String key="Railway Flooded Tol.">Допуск затопленной ж/д</String>
+  <String key="Railway Flooded Timer">Таймер затопленной ж/д</String>
+  <String key="Metro can be Flooding">Метро может затапливаться</String>
+  <String key="Metro Flooding Tol.">Допуск затопления (метро)</String>
+  <String key="Metro Flooding Timer">Таймер затопления (метро)</String>
+  <String key="Metro can be Flooded">Метро может быть затоплено</String>
+  <String key="Metro Flooded Tol.">Допуск затопленного метро</String>
+  <String key="Metro Flooded Timer">Таймер затопленного метро</String>
+
+  <!-- PTH -->
+  <String key="Pathway Flood Settings">Настройки затопления дорожек</String>
+  <String key="Pathways can be Flooding">Дорожки могут затапливаться</String>
+  <String key="Pathway Flooding Tol.">Допуск затопления (дорожка)</String>
+  <String key="Pathway Flooding Timer">Таймер затопления (дорожка)</String>
+  <String key="Pathways can be Flooded">Дорожки могут быть затоплены</String>
+  <String key="Pathway Flooded Tol.">Допуск затопленной дорожки</String>
+  <String key="Pathway Flooded Timer">Таймер затопленной дорожки</String>
+
+  <!-- RMV -->
+  <String key="Safely Remove Rainfall">Безопасно удалить Rainfall</String>
+  <String key="End Storm">Завершить шторм</String>
+  <String key="Halt All RF Assets">Остановить все объекты Rainfall</String>
+  <String key="Delete All RF Assets">Удалить все объекты Rainfall</String>
+  <String key="Terminate RF for Removal">Завершить Rainfall для удаления</String>
+
+</Translations>

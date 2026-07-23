@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tradução DE do mod Rainfall. Rascunho inicial - aguardando revisão. -->
+<Translations lang="de">
+
+  <!-- GEN1 -->
+  <String key="General Settings 1">Allgemeine Einstellungen 1</String>
+  <String key="#RainForecast Chirps">#Regenvorhersage-Chirps</String>
+  <String key="#Rainfall Chirps">#Regen-Chirps</String>
+  <String key="Prevent Rain Before Milestone">Regen vor Meilenstein verhindern</String>
+  <String key="Automatic Pipe Laterals">Automatische Rohrabzweigungen</String>
+  <String key="Unowned Tiles Do Not Flood">Nicht gekaufte Kacheln überfluten nicht</String>
+  <String key="Storm Drain Asset Control">Sturmablauf-Kontrolle</String>
+  <String key="No Control">Keine Kontrolle</String>
+  <String key="District Control">Bezirkskontrolle</String>
+  <String key="ID Control">ID-Kontrolle</String>
+  <String key="District Control with ID Override">Bezirkskontrolle mit ID-Überschreibung</String>
+  <String key="Gravity Drainage Options">Schwerkraft-Entwässerungsoptionen</String>
+  <String key="Ignore Gravity">Schwerkraft ignorieren</String>
+  <String key="Simplified Gravity">Vereinfachte Schwerkraft</String>
+  <String key="Advanced Gravity">Erweiterte Schwerkraft</String>
+  <String key="Increase Building Pads">Gebäudesockel erhöhen</String>
+  <String key=" units"> Einheiten</String>
+  <String key="Inlet Rate Multiplier">Zulaufraten-Multiplikator</String>
+  <String key="Outlet Rate Multiplier">Ablaufraten-Multiplikator</String>
+  <String key="Make it Rain! Intensity">Intensität von „Regnen lassen!"</String>
+  <String key="Make it Rain!">Regnen lassen!</String>
+
+  <!-- GEN2 -->
+  <String key="General Settings 2">Allgemeine Einstellungen 2</String>
+  <String key="Prevent Building Upgrades from Increased Landvalue due to Rainwater">Gebäude-Upgrades durch erhöhten Grundstückswert wegen Regenwasser verhindern</String>
+  <String key="Prev. Upgrade Add. Time">Zusätzl. Zeit z. Verhindern v. Upgrade</String>
+  <String key=" min"> Min</String>
+  <String key="Min. time btw. storms">Min. Zeit zw. Stürmen</String>
+  <String key="Max. time btw. storms">Max. Zeit zw. Stürmen</String>
+  <String key="Simulate Pollution">Verschmutzung simulieren</String>
+  <String key="Prevent Deleting Dam Water Sources">Löschen von Staudamm-Wasserquellen verhindern</String>
+  <String key="Convert Sully's Water Drain Pipe to SD Outlet">Sullys Abwasserrohr in Sturmablauf umwandeln</String>
+  <String key="Reset Weather">Wetter zurücksetzen</String>
+  <String key="Un-Halt All RF Assets">Alle Rainfall-Objekte reaktivieren</String>
+  <String key="Un-Terminate RF">Beendigung von Rainfall rückgängig machen</String>
+
+  <!-- RO -->
+  <String key="Runoff Settings">Abfluss-Einstellungen</String>
+  <String key="Global Runoff Scalar">Globaler Abfluss-Skalar</String>
+  <String key="Intensity Rate of Change">Änderungsrate der Intensität</String>
+  <String key="Min. Drainage Area RO">Min. Abfluss des Entwässerungsgebiets</String>
+  <String key="Max. Drainage Area RO">Max. Abfluss des Entwässerungsgebiets</String>
+  <String key="Simulation Tiles">Simulierte Kacheln</String>
+  <String key="None">Keine</String>
+  <String key="Owned Tiles">Gekaufte Kacheln</String>
+  <String key="Adjacent Tiles">Angrenzende Kacheln</String>
+  <String key="Adjacent and Diagonal Tiles">Angrenzende und diagonale Kacheln</String>
+  <String key="25 Tiles">25 Kacheln</String>
+  <String key="49 Tiles">49 Kacheln</String>
+  <String key="81 Tiles">81 Kacheln</String>
+  <String key="Apply Simulation Tiles Choice">Auswahl der simulierten Kacheln anwenden</String>
+  <String key="Vacant Runoff Coeff.">Abflusskoeff. (unbebaut)</String>
+  <String key="Default Runoff Coeff.">Standard-Abflusskoeff.</String>
+  <String key="Flood Spawner Scalar">Skalar des Überflutungs-Generators</String>
+
+  <!-- PUB -->
+  <String key="Public Building Runoff Coefficients">Abflusskoeffizienten - Öffentliche Gebäude</String>
+  <String key="Electricity">Elektrizität</String>
+  <String key="Healthcare">Gesundheitswesen</String>
+  <String key="Emergency Services">Rettungsdienste</String>
+  <String key="Police &amp; Banks">Polizei &amp; Banken</String>
+  <String key="Education &amp; Campus">Bildung &amp; Campus</String>
+  <String key="Transport">Transport</String>
+  <String key="Parks and Plaza">Parks und Plätze</String>
+  <String key="Unique Buildings">Einzigartige Gebäude</String>
+  <String key="Monuments">Monumente</String>
+
+  <!-- PVT -->
+  <String key="Private Building Runoff Coefficients">Abflusskoeffizienten - Private Gebäude</String>
+  <String key="Low Density Residential">Wohngebiet mit niedriger Dichte</String>
+  <String key="High Density Residential">Wohngebiet mit hoher Dichte</String>
+  <String key="Low Density Commercial">Gewerbegebiet mit niedriger Dichte</String>
+  <String key="High Density Commercial">Gewerbegebiet mit hoher Dichte</String>
+  <String key="Office">Büro</String>
+  <String key="Self Sufficient Resi. Mod.">Modif. Selbstversorgendes Wohngebiet</String>
+  <String key="Tourist/Leisure Mod.">Modif. Tourismus/Freizeit</String>
+  <String key="Organic Commercial Mod.">Modif. Bio-Gewerbe</String>
+  <String key="High Tech Office Mod.">Modif. High-Tech-Büro</String>
+  <String key="Financial Office Mod.">Modif. Finanzbüro</String>
+  <String key="Wall-To-Wall Mod.">Modif. Blockrandbebauung (Wall-to-Wall)</String>
+
+  <!-- IND -->
+  <String key="Industrial Building Runoff Coefficients">Abflusskoeffizienten - Industriegebäude</String>
+  <String key="Industry - General">Industrie - Allgemein</String>
+  <String key="Industry - Forest">Industrie - Forstwirtschaft</String>
+  <String key="Industry - Agriculture">Industrie - Landwirtschaft</String>
+  <String key="Industry - Ore">Industrie - Erz</String>
+  <String key="Industry - Oil">Industrie - Öl</String>
+  <String key="Warehouse">Lagerhaus</String>
+  <String key="Garbage">Müll</String>
+
+  <!-- NTWK -->
+  <String key="Network Runoff Coefficients">Abflusskoeffizienten - Netzwerke</String>
+  <String key="Roads">Straßen</String>
+  <String key="Pathways">Fußwege</String>
+  <String key="Runway">Start-/Landebahn</String>
+  <String key="Taxiway">Rollbahn</String>
+  <String key="Train Track">Bahngleis</String>
+  <String key="Metro Track">U-Bahn-Gleis</String>
+  <String key="Monorail Track">Einschienenbahn-Gleis</String>
+
+  <!-- BLDG -->
+  <String key="Building Flood Settings">Gebäude-Überflutungseinstellungen</String>
+  <String key="Buildings can be Flooding">Gebäude können überflutet werden (im Gange)</String>
+  <String key="Building Flooding Tol.">Überflutungstoler. (Gebäude)</String>
+  <String key="Building Flooding Timer">Überflutungstimer (Gebäude)</String>
+  <String key=" seconds"> Sekunden</String>
+  <String key="Flooding Bldg Efficiency">Effizienz des überflutenden Gebäudes</String>
+  <String key=" %"> %</String>
+  <String key="Buildings can be Flooded">Gebäude können überflutet sein</String>
+  <String key="Building Flooded Tol.">Toler. für überflutetes Gebäude</String>
+  <String key="Building Flooded Timer">Timer für überflutetes Gebäude</String>
+  <String key="Flooded Bldg Efficiency">Effizienz des überfluteten Gebäudes</String>
+
+  <!-- RDS -->
+  <String key="Roadway Flood Settings">Straßen-Überflutungseinstellungen</String>
+  <String key="Roadways can be Flooding">Straßen können überflutet werden (im Gange)</String>
+  <String key="Roadway Flooding Tol.">Überflutungstoler. (Straße)</String>
+  <String key="Roadway Flooding Timer">Überflutungstimer (Straße)</String>
+  <String key="Roadways can be Flooded">Straßen können überflutet sein</String>
+  <String key="Roadway Flooded Tol.">Toler. für überflutete Straße</String>
+  <String key="Roadway Flooded Timer">Timer für überflutete Straße</String>
+
+  <!-- RLS -->
+  <String key="Railway Flood Settings">Bahnstrecken-Überflutungseinstellungen</String>
+  <String key="Railways can be Flooding">Bahnstrecken können überflutet werden (im Gange)</String>
+  <String key="Railway Flooding Tol.">Überflutungstoler. (Bahnstrecke)</String>
+  <String key="Railway Flooding Timer">Überflutungstimer (Bahnstrecke)</String>
+  <String key="Railways can be Flooded">Bahnstrecken können überflutet sein</String>
+  <String key="Railway Flooded Tol.">Toler. für überflutete Bahnstrecke</String>
+  <String key="Railway Flooded Timer">Timer für überflutete Bahnstrecke</String>
+  <String key="Metro can be Flooding">U-Bahn kann überflutet werden (im Gange)</String>
+  <String key="Metro Flooding Tol.">Überflutungstoler. (U-Bahn)</String>
+  <String key="Metro Flooding Timer">Überflutungstimer (U-Bahn)</String>
+  <String key="Metro can be Flooded">U-Bahn kann überflutet sein</String>
+  <String key="Metro Flooded Tol.">Toler. für überflutete U-Bahn</String>
+  <String key="Metro Flooded Timer">Timer für überflutete U-Bahn</String>
+
+  <!-- PTH -->
+  <String key="Pathway Flood Settings">Fußweg-Überflutungseinstellungen</String>
+  <String key="Pathways can be Flooding">Fußwege können überflutet werden (im Gange)</String>
+  <String key="Pathway Flooding Tol.">Überflutungstoler. (Fußweg)</String>
+  <String key="Pathway Flooding Timer">Überflutungstimer (Fußweg)</String>
+  <String key="Pathways can be Flooded">Fußwege können überflutet sein</String>
+  <String key="Pathway Flooded Tol.">Toler. für überfluteten Fußweg</String>
+  <String key="Pathway Flooded Timer">Timer für überfluteten Fußweg</String>
+
+  <!-- RMV -->
+  <String key="Safely Remove Rainfall">Rainfall sicher entfernen</String>
+  <String key="End Storm">Sturm beenden</String>
+  <String key="Halt All RF Assets">Alle Rainfall-Objekte anhalten</String>
+  <String key="Delete All RF Assets">Alle Rainfall-Objekte löschen</String>
+  <String key="Terminate RF for Removal">Rainfall zur Entfernung beenden</String>
+
+</Translations>

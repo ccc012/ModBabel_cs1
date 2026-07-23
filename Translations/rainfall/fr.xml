@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tradução FR do mod Rainfall. Rascunho inicial - aguardando revisão. -->
+<Translations lang="fr">
+
+  <!-- GEN1 -->
+  <String key="General Settings 1">Paramètres Généraux 1</String>
+  <String key="#RainForecast Chirps">#Alertes de Prévision de Pluie (Chirper)</String>
+  <String key="#Rainfall Chirps">#Alertes de Pluie (Chirper)</String>
+  <String key="Prevent Rain Before Milestone">Empêcher la Pluie Avant le Jalon</String>
+  <String key="Automatic Pipe Laterals">Raccords de Tuyaux Automatiques</String>
+  <String key="Unowned Tiles Do Not Flood">Les Terrains Non Achetés Ne S'inondent Pas</String>
+  <String key="Storm Drain Asset Control">Contrôle des Bouches d'Égout Pluviales</String>
+  <String key="No Control">Aucun Contrôle</String>
+  <String key="District Control">Contrôle par District</String>
+  <String key="ID Control">Contrôle par ID</String>
+  <String key="District Control with ID Override">Contrôle par District avec Substitution par ID</String>
+  <String key="Gravity Drainage Options">Options de Drainage par Gravité</String>
+  <String key="Ignore Gravity">Ignorer la Gravité</String>
+  <String key="Simplified Gravity">Gravité Simplifiée</String>
+  <String key="Advanced Gravity">Gravité Avancée</String>
+  <String key="Increase Building Pads">Augmenter la Base des Bâtiments</String>
+  <String key=" units"> unités</String>
+  <String key="Inlet Rate Multiplier">Multiplicateur du Débit d'Entrée</String>
+  <String key="Outlet Rate Multiplier">Multiplicateur du Débit de Sortie</String>
+  <String key="Make it Rain! Intensity">Intensité de « Faire Pleuvoir ! »</String>
+  <String key="Make it Rain!">Faire Pleuvoir !</String>
+
+  <!-- GEN2 -->
+  <String key="General Settings 2">Paramètres Généraux 2</String>
+  <String key="Prevent Building Upgrades from Increased Landvalue due to Rainwater">Empêcher l'Amélioration des Bâtiments due à la Valeur Foncière Augmentée par la Pluie</String>
+  <String key="Prev. Upgrade Add. Time">Temps Add. p/ Empêcher Amélioration</String>
+  <String key=" min"> min</String>
+  <String key="Min. time btw. storms">Temps min. entre tempêtes</String>
+  <String key="Max. time btw. storms">Temps max. entre tempêtes</String>
+  <String key="Simulate Pollution">Simuler la Pollution</String>
+  <String key="Prevent Deleting Dam Water Sources">Empêcher la Suppression des Sources d'Eau des Barrages</String>
+  <String key="Convert Sully's Water Drain Pipe to SD Outlet">Convertir le Tuyau de Drainage de Sully en Sortie d'Égout Pluvial</String>
+  <String key="Reset Weather">Réinitialiser la Météo</String>
+  <String key="Un-Halt All RF Assets">Réactiver Tous les Éléments de Rainfall</String>
+  <String key="Un-Terminate RF">Annuler la Fin de Rainfall</String>
+
+  <!-- RO -->
+  <String key="Runoff Settings">Paramètres de Ruissellement</String>
+  <String key="Global Runoff Scalar">Échelle Globale de Ruissellement</String>
+  <String key="Intensity Rate of Change">Taux de Variation de l'Intensité</String>
+  <String key="Min. Drainage Area RO">Ruissellement Min. de la Zone de Drainage</String>
+  <String key="Max. Drainage Area RO">Ruissellement Max. de la Zone de Drainage</String>
+  <String key="Simulation Tiles">Terrains Simulés</String>
+  <String key="None">Aucun</String>
+  <String key="Owned Tiles">Terrains Achetés</String>
+  <String key="Adjacent Tiles">Terrains Adjacents</String>
+  <String key="Adjacent and Diagonal Tiles">Terrains Adjacents et Diagonaux</String>
+  <String key="25 Tiles">25 Terrains</String>
+  <String key="49 Tiles">49 Terrains</String>
+  <String key="81 Tiles">81 Terrains</String>
+  <String key="Apply Simulation Tiles Choice">Appliquer le Choix des Terrains Simulés</String>
+  <String key="Vacant Runoff Coeff.">Coeff. de Ruissellement (Vacant)</String>
+  <String key="Default Runoff Coeff.">Coeff. de Ruissellement par Défaut</String>
+  <String key="Flood Spawner Scalar">Échelle du Générateur d'Inondation</String>
+
+  <!-- PUB -->
+  <String key="Public Building Runoff Coefficients">Coefficients de Ruissellement - Bâtiments Publics</String>
+  <String key="Electricity">Électricité</String>
+  <String key="Healthcare">Santé</String>
+  <String key="Emergency Services">Services d'Urgence</String>
+  <String key="Police &amp; Banks">Police et Banques</String>
+  <String key="Education &amp; Campus">Éducation et Campus</String>
+  <String key="Transport">Transport</String>
+  <String key="Parks and Plaza">Parcs et Places</String>
+  <String key="Unique Buildings">Bâtiments Uniques</String>
+  <String key="Monuments">Monuments</String>
+
+  <!-- PVT -->
+  <String key="Private Building Runoff Coefficients">Coefficients de Ruissellement - Bâtiments Privés</String>
+  <String key="Low Density Residential">Résidentiel Basse Densité</String>
+  <String key="High Density Residential">Résidentiel Haute Densité</String>
+  <String key="Low Density Commercial">Commercial Basse Densité</String>
+  <String key="High Density Commercial">Commercial Haute Densité</String>
+  <String key="Office">Bureaux</String>
+  <String key="Self Sufficient Resi. Mod.">Modif. Résidentiel Autosuffisant</String>
+  <String key="Tourist/Leisure Mod.">Modif. Tourisme/Loisirs</String>
+  <String key="Organic Commercial Mod.">Modif. Commercial Bio</String>
+  <String key="High Tech Office Mod.">Modif. Bureau High-Tech</String>
+  <String key="Financial Office Mod.">Modif. Bureau Financier</String>
+  <String key="Wall-To-Wall Mod.">Modif. Mitoyen (Wall-to-Wall)</String>
+
+  <!-- IND -->
+  <String key="Industrial Building Runoff Coefficients">Coefficients de Ruissellement - Bâtiments Industriels</String>
+  <String key="Industry - General">Industrie - Générale</String>
+  <String key="Industry - Forest">Industrie - Forestière</String>
+  <String key="Industry - Agriculture">Industrie - Agricole</String>
+  <String key="Industry - Ore">Industrie - Minerai</String>
+  <String key="Industry - Oil">Industrie - Pétrole</String>
+  <String key="Warehouse">Entrepôt</String>
+  <String key="Garbage">Déchets</String>
+
+  <!-- NTWK -->
+  <String key="Network Runoff Coefficients">Coefficients de Ruissellement - Réseaux</String>
+  <String key="Roads">Routes</String>
+  <String key="Pathways">Chemins</String>
+  <String key="Runway">Piste d'Envol</String>
+  <String key="Taxiway">Voie de Circulation</String>
+  <String key="Train Track">Voie Ferrée</String>
+  <String key="Metro Track">Voie de Métro</String>
+  <String key="Monorail Track">Voie de Monorail</String>
+
+  <!-- BLDG -->
+  <String key="Building Flood Settings">Paramètres d'Inondation des Bâtiments</String>
+  <String key="Buildings can be Flooding">Les Bâtiments Peuvent Être en Cours d'Inondation</String>
+  <String key="Building Flooding Tol.">Toler. d'Inondation (Bâtiment)</String>
+  <String key="Building Flooding Timer">Minuteur d'Inondation (Bâtiment)</String>
+  <String key=" seconds"> secondes</String>
+  <String key="Flooding Bldg Efficiency">Efficacité du Bâtiment en Inondation</String>
+  <String key=" %"> %</String>
+  <String key="Buildings can be Flooded">Les Bâtiments Peuvent Être Inondés</String>
+  <String key="Building Flooded Tol.">Toler. de Bâtiment Inondé</String>
+  <String key="Building Flooded Timer">Minuteur de Bâtiment Inondé</String>
+  <String key="Flooded Bldg Efficiency">Efficacité du Bâtiment Inondé</String>
+
+  <!-- RDS -->
+  <String key="Roadway Flood Settings">Paramètres d'Inondation des Routes</String>
+  <String key="Roadways can be Flooding">Les Routes Peuvent Être en Cours d'Inondation</String>
+  <String key="Roadway Flooding Tol.">Toler. d'Inondation (Route)</String>
+  <String key="Roadway Flooding Timer">Minuteur d'Inondation (Route)</String>
+  <String key="Roadways can be Flooded">Les Routes Peuvent Être Inondées</String>
+  <String key="Roadway Flooded Tol.">Toler. de Route Inondée</String>
+  <String key="Roadway Flooded Timer">Minuteur de Route Inondée</String>
+
+  <!-- RLS -->
+  <String key="Railway Flood Settings">Paramètres d'Inondation des Voies Ferrées</String>
+  <String key="Railways can be Flooding">Les Voies Ferrées Peuvent Être en Cours d'Inondation</String>
+  <String key="Railway Flooding Tol.">Toler. d'Inondation (Voie Ferrée)</String>
+  <String key="Railway Flooding Timer">Minuteur d'Inondation (Voie Ferrée)</String>
+  <String key="Railways can be Flooded">Les Voies Ferrées Peuvent Être Inondées</String>
+  <String key="Railway Flooded Tol.">Toler. de Voie Ferrée Inondée</String>
+  <String key="Railway Flooded Timer">Minuteur de Voie Ferrée Inondée</String>
+  <String key="Metro can be Flooding">Le Métro Peut Être en Cours d'Inondation</String>
+  <String key="Metro Flooding Tol.">Toler. d'Inondation (Métro)</String>
+  <String key="Metro Flooding Timer">Minuteur d'Inondation (Métro)</String>
+  <String key="Metro can be Flooded">Le Métro Peut Être Inondé</String>
+  <String key="Metro Flooded Tol.">Toler. de Métro Inondé</String>
+  <String key="Metro Flooded Timer">Minuteur de Métro Inondé</String>
+
+  <!-- PTH -->
+  <String key="Pathway Flood Settings">Paramètres d'Inondation des Chemins</String>
+  <String key="Pathways can be Flooding">Les Chemins Peuvent Être en Cours d'Inondation</String>
+  <String key="Pathway Flooding Tol.">Toler. d'Inondation (Chemin)</String>
+  <String key="Pathway Flooding Timer">Minuteur d'Inondation (Chemin)</String>
+  <String key="Pathways can be Flooded">Les Chemins Peuvent Être Inondés</String>
+  <String key="Pathway Flooded Tol.">Toler. de Chemin Inondé</String>
+  <String key="Pathway Flooded Timer">Minuteur de Chemin Inondé</String>
+
+  <!-- RMV -->
+  <String key="Safely Remove Rainfall">Supprimer Rainfall en Toute Sécurité</String>
+  <String key="End Storm">Terminer la Tempête</String>
+  <String key="Halt All RF Assets">Arrêter Tous les Éléments de Rainfall</String>
+  <String key="Delete All RF Assets">Supprimer Tous les Éléments de Rainfall</String>
+  <String key="Terminate RF for Removal">Terminer Rainfall pour Suppression</String>
+
+</Translations>

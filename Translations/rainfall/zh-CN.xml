@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tradução ZH-CN do mod Rainfall. Rascunho inicial - aguardando revisão. -->
+<Translations lang="zh-CN">
+
+  <!-- GEN1 -->
+  <String key="General Settings 1">常规设置 1</String>
+  <String key="#RainForecast Chirps">#降雨预报提醒(Chirper)</String>
+  <String key="#Rainfall Chirps">#降雨提醒(Chirper)</String>
+  <String key="Prevent Rain Before Milestone">里程碑前禁止降雨</String>
+  <String key="Automatic Pipe Laterals">自动管道支管</String>
+  <String key="Unowned Tiles Do Not Flood">未购买地块不会被淹</String>
+  <String key="Storm Drain Asset Control">雨水管道资产控制</String>
+  <String key="No Control">无控制</String>
+  <String key="District Control">区域控制</String>
+  <String key="ID Control">ID控制</String>
+  <String key="District Control with ID Override">区域控制(ID优先)</String>
+  <String key="Gravity Drainage Options">重力排水选项</String>
+  <String key="Ignore Gravity">忽略重力</String>
+  <String key="Simplified Gravity">简化重力</String>
+  <String key="Advanced Gravity">高级重力</String>
+  <String key="Increase Building Pads">增加建筑地基</String>
+  <String key=" units"> 单位</String>
+  <String key="Inlet Rate Multiplier">进水速率倍数</String>
+  <String key="Outlet Rate Multiplier">出水速率倍数</String>
+  <String key="Make it Rain! Intensity">"降雨吧!"强度</String>
+  <String key="Make it Rain!">降雨吧!</String>
+
+  <!-- GEN2 -->
+  <String key="General Settings 2">常规设置 2</String>
+  <String key="Prevent Building Upgrades from Increased Landvalue due to Rainwater">防止因雨水导致地价上涨而升级建筑</String>
+  <String key="Prev. Upgrade Add. Time">阻止升级附加时间</String>
+  <String key=" min"> 分钟</String>
+  <String key="Min. time btw. storms">风暴间最短时间</String>
+  <String key="Max. time btw. storms">风暴间最长时间</String>
+  <String key="Simulate Pollution">模拟污染</String>
+  <String key="Prevent Deleting Dam Water Sources">禁止删除水坝水源</String>
+  <String key="Convert Sully's Water Drain Pipe to SD Outlet">将Sully排水管转换为雨水管出口</String>
+  <String key="Reset Weather">重置天气</String>
+  <String key="Un-Halt All RF Assets">恢复所有Rainfall资产</String>
+  <String key="Un-Terminate RF">取消终止Rainfall</String>
+
+  <!-- RO -->
+  <String key="Runoff Settings">径流设置</String>
+  <String key="Global Runoff Scalar">全局径流比例</String>
+  <String key="Intensity Rate of Change">强度变化率</String>
+  <String key="Min. Drainage Area RO">排水区最小径流</String>
+  <String key="Max. Drainage Area RO">排水区最大径流</String>
+  <String key="Simulation Tiles">模拟地块</String>
+  <String key="None">无</String>
+  <String key="Owned Tiles">已购买地块</String>
+  <String key="Adjacent Tiles">相邻地块</String>
+  <String key="Adjacent and Diagonal Tiles">相邻及对角地块</String>
+  <String key="25 Tiles">25个地块</String>
+  <String key="49 Tiles">49个地块</String>
+  <String key="81 Tiles">81个地块</String>
+  <String key="Apply Simulation Tiles Choice">应用模拟地块选择</String>
+  <String key="Vacant Runoff Coeff.">空置径流系数</String>
+  <String key="Default Runoff Coeff.">默认径流系数</String>
+  <String key="Flood Spawner Scalar">洪水生成器比例</String>
+
+  <!-- PUB -->
+  <String key="Public Building Runoff Coefficients">径流系数 - 公共建筑</String>
+  <String key="Electricity">电力</String>
+  <String key="Healthcare">医疗</String>
+  <String key="Emergency Services">应急服务</String>
+  <String key="Police &amp; Banks">警察局和银行</String>
+  <String key="Education &amp; Campus">教育与校园</String>
+  <String key="Transport">交通</String>
+  <String key="Parks and Plaza">公园与广场</String>
+  <String key="Unique Buildings">独特建筑</String>
+  <String key="Monuments">纪念建筑</String>
+
+  <!-- PVT -->
+  <String key="Private Building Runoff Coefficients">径流系数 - 私有建筑</String>
+  <String key="Low Density Residential">低密度住宅</String>
+  <String key="High Density Residential">高密度住宅</String>
+  <String key="Low Density Commercial">低密度商业</String>
+  <String key="High Density Commercial">高密度商业</String>
+  <String key="Office">办公</String>
+  <String key="Self Sufficient Resi. Mod.">自给自足住宅修正</String>
+  <String key="Tourist/Leisure Mod.">旅游/休闲修正</String>
+  <String key="Organic Commercial Mod.">有机商业修正</String>
+  <String key="High Tech Office Mod.">高科技办公修正</String>
+  <String key="Financial Office Mod.">金融办公修正</String>
+  <String key="Wall-To-Wall Mod.">连排建筑修正</String>
+
+  <!-- IND -->
+  <String key="Industrial Building Runoff Coefficients">径流系数 - 工业建筑</String>
+  <String key="Industry - General">工业 - 通用</String>
+  <String key="Industry - Forest">工业 - 林业</String>
+  <String key="Industry - Agriculture">工业 - 农业</String>
+  <String key="Industry - Ore">工业 - 矿石</String>
+  <String key="Industry - Oil">工业 - 石油</String>
+  <String key="Warehouse">仓库</String>
+  <String key="Garbage">垃圾</String>
+
+  <!-- NTWK -->
+  <String key="Network Runoff Coefficients">径流系数 - 路网</String>
+  <String key="Roads">道路</String>
+  <String key="Pathways">人行道</String>
+  <String key="Runway">跑道</String>
+  <String key="Taxiway">滑行道</String>
+  <String key="Train Track">铁轨</String>
+  <String key="Metro Track">地铁轨道</String>
+  <String key="Monorail Track">单轨轨道</String>
+
+  <!-- BLDG -->
+  <String key="Building Flood Settings">建筑淹水设置</String>
+  <String key="Buildings can be Flooding">建筑可被淹没中</String>
+  <String key="Building Flooding Tol.">淹没容忍度(建筑)</String>
+  <String key="Building Flooding Timer">淹没计时器(建筑)</String>
+  <String key=" seconds"> 秒</String>
+  <String key="Flooding Bldg Efficiency">淹没中建筑效率</String>
+  <String key=" %"> %</String>
+  <String key="Buildings can be Flooded">建筑可被淹没</String>
+  <String key="Building Flooded Tol.">已淹没建筑容忍度</String>
+  <String key="Building Flooded Timer">已淹没建筑计时器</String>
+  <String key="Flooded Bldg Efficiency">已淹没建筑效率</String>
+
+  <!-- RDS -->
+  <String key="Roadway Flood Settings">道路淹水设置</String>
+  <String key="Roadways can be Flooding">道路可被淹没中</String>
+  <String key="Roadway Flooding Tol.">淹没容忍度(道路)</String>
+  <String key="Roadway Flooding Timer">淹没计时器(道路)</String>
+  <String key="Roadways can be Flooded">道路可被淹没</String>
+  <String key="Roadway Flooded Tol.">已淹没道路容忍度</String>
+  <String key="Roadway Flooded Timer">已淹没道路计时器</String>
+
+  <!-- RLS -->
+  <String key="Railway Flood Settings">铁路淹水设置</String>
+  <String key="Railways can be Flooding">铁路可被淹没中</String>
+  <String key="Railway Flooding Tol.">淹没容忍度(铁路)</String>
+  <String key="Railway Flooding Timer">淹没计时器(铁路)</String>
+  <String key="Railways can be Flooded">铁路可被淹没</String>
+  <String key="Railway Flooded Tol.">已淹没铁路容忍度</String>
+  <String key="Railway Flooded Timer">已淹没铁路计时器</String>
+  <String key="Metro can be Flooding">地铁可被淹没中</String>
+  <String key="Metro Flooding Tol.">淹没容忍度(地铁)</String>
+  <String key="Metro Flooding Timer">淹没计时器(地铁)</String>
+  <String key="Metro can be Flooded">地铁可被淹没</String>
+  <String key="Metro Flooded Tol.">已淹没地铁容忍度</String>
+  <String key="Metro Flooded Timer">已淹没地铁计时器</String>
+
+  <!-- PTH -->
+  <String key="Pathway Flood Settings">人行道淹水设置</String>
+  <String key="Pathways can be Flooding">人行道可被淹没中</String>
+  <String key="Pathway Flooding Tol.">淹没容忍度(人行道)</String>
+  <String key="Pathway Flooding Timer">淹没计时器(人行道)</String>
+  <String key="Pathways can be Flooded">人行道可被淹没</String>
+  <String key="Pathway Flooded Tol.">已淹没人行道容忍度</String>
+  <String key="Pathway Flooded Timer">已淹没人行道计时器</String>
+
+  <!-- RMV -->
+  <String key="Safely Remove Rainfall">安全移除Rainfall</String>
+  <String key="End Storm">结束风暴</String>
+  <String key="Halt All RF Assets">停止所有Rainfall资产</String>
+  <String key="Delete All RF Assets">删除所有Rainfall资产</String>
+  <String key="Terminate RF for Removal">终止Rainfall以便移除</String>
+
+</Translations>
