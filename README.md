@@ -67,6 +67,11 @@ tela por tela em jogo (ver status por módulo abaixo).
 | [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | pt-BR verificado tela por tela em jogo; demais idiomas são rascunhos ainda não verificados visualmente | 17/17 (ver tabela acima) |
 | [Play It!](https://steamcommunity.com/sharedfiles/filedetails/?id=2741726428) ([código-fonte](https://github.com/keallu/CSL-PlayIt)) | Keallu | feito sem o mod instalado nesta máquina - compila, mas **nunca foi aberto em jogo** | pt-BR apenas (rascunho não verificado) |
 | [Advanced Stop Selection](https://steamcommunity.com/sharedfiles/filedetails/?id=2862973068) ([código-fonte](https://github.com/MacSergey/ImprovedStopSelection)) | BloodyPenguin, macsergey | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+| [Auto Line Budget 21](https://steamcommunity.com/sharedfiles/filedetails/?id=2349240408) ([código-fonte](https://github.com/jakeluba/AutoLineBudget21)) | jakeluba | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+
+**Mods instalados sem módulo próprio, porque já vêm com pt-BR oficial embutido** (nada a fazer no ModBabel):
+- [81 Tiles 2](https://github.com/algernon-A/EightyOne2) - `Translations/pt-BR.csv` completo no próprio mod
+- [ACME](https://github.com/algernon-A/ACME) - idem
 
 ### Notas sobre o módulo Play It!
 
@@ -115,6 +120,23 @@ tela por tela em jogo (ver status por módulo abaixo).
 - Feito sem testar em jogo ainda, apesar do mod estar instalado nesta
   máquina - falta abrir o Content Manager e conferir a descrição/texto
   de changelog.
+
+### Notas sobre o módulo Auto Line Budget
+
+- Mod bem simples e sem tela de opções - só ajusta o orçamento das
+  linhas de transporte automaticamente. O único texto traduzido é a
+  descrição no Content Manager (`IUserMod.Description`), interceptada
+  com uma chave sintética (`Mod_Description`) em vez do texto em si,
+  porque o texto original tem quebras de linha e um atributo XML
+  normaliza qualquer quebra de linha pra espaço (regra do padrão XML) -
+  usar o texto multi-linha como chave nunca bateria em tempo de
+  execução.
+- Duas mensagens de Chirper geradas dentro do loop principal (quando o
+  orçamento de uma linha muda bastante) não foram traduzidas - são
+  montadas e usadas na hora, sem passar por nenhum campo interceptável,
+  e patchar `MessageManager.TryCreateMessage` (usado por dezenas de
+  sistemas do próprio jogo) só pra essas duas frases seria frágil demais
+  pro ganho.
 
 ### Notas sobre o módulo Rainfall
 
