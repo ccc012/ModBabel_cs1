@@ -28,9 +28,33 @@ os textos que cada mod original desenha na interface.
 
 ## Mods suportados
 
-| Mod original | Status | Idiomas |
-|---|---|---|
-| _(a definir - Fase 3 do planejamento)_ | planejado | pt-BR |
+| Mod original | Autor | Status | Idiomas |
+|---|---|---|---|
+| [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | strings extraídas, patch escrito, **não testado no jogo ainda** | pt-BR |
+
+### Notas sobre o módulo Rainfall
+
+- Mod é open-source (MIT) - strings extraídas direto do código-fonte,
+  sem necessidade de decompilar.
+- O autor confirmou publicamente (comentários do Workshop) que nunca
+  fez localização própria para o mod - confirma a necessidade da
+  Rota 2 (Harmony patch).
+- Todas as strings do mod ficam em um único lugar
+  (`Source/UI/OptionHandler.cs`, a tela de opções do mod), o que
+  permitiu uma estratégia mais simples que o template genérico: um
+  único patch que envolve o `UIHelperBase` recebido por
+  `SetUpOptions` num wrapper tradutor (`TranslatingUIHelper`), em vez
+  de um patch por string/painel.
+- Pendências conhecidas antes de considerar "testado":
+  - Confirmar no dnSpy (contra a `.dll` instalada) que
+    `Rainfall.UI.OptionHandler.SetUpOptions` é o nome/assinatura real
+    (extraído do código-fonte público, pode ter mudado em alguma
+    atualização não sincronizada com o GitHub)
+  - Confirmar a assinatura exata de `ICities.UIHelperBase` contra o
+    `ICities.dll` instalado
+  - O botão "Reset [nome do grupo]" usa um texto montado
+    dinamicamente por grupo - ainda não capturado no XML de tradução
+  - Rodar o checklist completo de `07_TESTES_ESTRATEGIA.md` (vault)
 
 ## Documentação de planejamento
 

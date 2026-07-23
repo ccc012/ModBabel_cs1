@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Referência: strings originais extraídas de Source/UI/OptionHandler.cs
+  do mod Rainfall (github.com/yenyang/rainfall), em 2026-07-23.
+  A chave (key) é o texto original em inglês, exatamente como aparece
+  no código - este mod não define um sistema de chaves próprio.
+-->
+<Translations lang="en">
+    <String key="Make it Rain!">Make it Rain!</String>
+</Translations>

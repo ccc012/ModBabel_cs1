@@ -13,7 +13,8 @@ namespace ModBabel.Core
         // cada novo módulo criado em src/Modules/
         private static readonly List<IModule> TodosOsModulos = new List<IModule>
         {
-            // new Modules.ModuloExemplo.ModuloExemplo(),
+            new Modules.Rainfall.RainfallModule(),
+            // new Modules.ModuloExemplo.ModuloExemplo(), // template, não ativar
         };
 
         public static void AtivarModulosDisponiveis(HarmonyLib.Harmony harmony)
