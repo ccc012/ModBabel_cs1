@@ -31,8 +31,19 @@ namespace ModBabel.Core
             // new Modules.ModuloExemplo.ModuloExemplo(), // template, não ativar
         };
 
+        // Contadores expostos pra tela de opções mostrar algo como
+        // "12 de 15 mods traduzidos detectados nesta partida" - hoje
+        // isso só ficava no log, sem nenhuma indicação visível pro
+        // jogador de quantos dos módulos escritos realmente se
+        // aplicam à instalação dele.
+        public static int TotalModulos => TodosOsModulos.Count;
+
+        public static int ModulosAtivados { get; private set; }
+
         public static void AtivarModulosDisponiveis(HarmonyLib.Harmony harmony)
         {
+            ModulosAtivados = 0;
+
             var assembliesCarregadas = new HashSet<string>(
                 AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetName().Name));
 
@@ -60,6 +71,7 @@ namespace ModBabel.Core
                 try
                 {
                     modulo.AplicarPatches(harmony);
+                    ModulosAtivados++;
                     Logger.Log($"Módulo '{modulo.ModuloId}' ativado.");
                 }
                 catch (Exception e)
