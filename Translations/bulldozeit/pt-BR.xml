@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Permite automatizar a demolição de edifícios.</String>
+  <String key="End of Day">Fim do Dia</String>
+  <String key="End of Month">Fim do Mês</String>
+  <String key="End of Year">Fim do Ano</String>
+  <String key="Every 5 seconds">A cada 5 segundos</String>
+  <String key="Every 10 seconds">A cada 10 segundos</String>
+  <String key="Every 30 seconds">A cada 30 segundos</String>
+  <String key="Interval">Intervalo</String>
+  <String key="Max Buildings (per interval)">Máx. de Edifícios (por intervalo)</String>
+  <String key="Preserve Historical Buildings">Preservar Edifícios Históricos</String>
+  <String key="Ignore Searching For Survivors">Ignorar Busca por Sobreviventes</String>
+  <String key="Show Counters in Bulldozer Bar">Mostrar Contadores na Barra de Demolição</String>
+  <String key="Show Statistics in Info Panel">Mostrar Estatísticas no Painel de Informações</String>
+</Translations>

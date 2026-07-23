@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Altera e adiciona pontos de surgimento de veículos</String>
+
+  <String key="Panel_AddAllVehicle">Adicionar todos os tipos de veículo</String>
+  <String key="Panel_AddPoint">Adicionar ponto</String>
+  <String key="Panel_AddVehicle">Adicionar tipo de veículo</String>
+  <String key="Panel_AddVehicleGroup">Adicionar grupo de tipos de veículo</String>
+  <String key="Panel_ApplyToAll">Aplicar a todos os edifícios deste tipo</String>
+  <String key="Panel_Copy">Copiar</String>
+  <String key="Panel_CopyPoint">Copiar ponto</String>
+  <String key="Panel_DuplicatePoint">Duplicar ponto</String>
+  <String key="Panel_NoPointWarning">Nenhum ponto neste edifício contém estes tipos de veículo:</String>
+  <String key="Panel_NoPointWarningContinue">Eles vão surgir na posição padrão.</String>
+  <String key="Panel_Paste">Colar</String>
+  <String key="Panel_PastePointAppend">Colar ponto (adicionar tipos de veículo)</String>
+  <String key="Panel_PastePointReplace">Colar ponto (substituir tipos de veículo)</String>
+  <String key="Panel_ResetToDefault">Redefinir para o padrão</String>
+  <String key="Panel_Title">Edifício #{0}</String>
+  <String key="Panel_TooFarPoint">Este ponto está muito longe da via para alguns tipos de veículo, mova-o pra mais perto, senão não vai funcionar</String>
+
+  <String key="PointType_Spawn">Surgimento</String>
+  <String key="PointType_Unspawn">Desaparecimento</String>
+
+  <String key="Property_FollowGround">Seguir o nível do terreno</String>
+  <String key="Property_PointType">Tipo</String>
+  <String key="Property_Position">Posição</String>
+
+  <String key="Settings_ColorTags">Etiquetas coloridas de veículo no painel</String>
+  <String key="Settings_Marker3D">Marcador 3D do ponto</String>
+  <String key="Settings_ShortcutAddNewPoint">Adicionar ponto</String>
+
+  <String key="Tool_ApplyToAllCaption">Aplicar a todos os edifícios do tipo</String>
+  <String key="Tool_ApplyToAllMessage">Você realmente quer aplicar esta configuração a todos os edifícios deste tipo?</String>
+  <String key="Tool_InfoCorrect">CONFIGURAÇÃO CORRETA</String>
+  <String key="Tool_InfoDragPoint">Arraste o ponto para mudar sua posição</String>
+  <String key="Tool_InfoEmptyPoint">Ponto vazio</String>
+  <String key="Tool_InfoHoverBuilding">Edifício #{0}</String>
+  <String key="Tool_InfoIncorrect">CONFIGURAÇÃO INCORRETA</String>
+  <String key="Tool_InfoPointHeight">Segure {0} para mudar a altura</String>
+  <String key="Tool_InfoSelectBuilding">Selecione um edifício</String>
+
+  <String key="VehicleTypeGroup_Cargo">Veículos de carga</String>
+  <String key="VehicleTypeGroup_Copters">Helicópteros</String>
+  <String key="VehicleTypeGroup_Default">Veículos padrão</String>
+  <String key="VehicleTypeGroup_Emergency">Veículos de emergência</String>
+  <String key="VehicleTypeGroup_Planes">Aviões</String>
+  <String key="VehicleTypeGroup_Public">Transporte público</String>
+  <String key="VehicleTypeGroup_Service">Serviço</String>
+  <String key="VehicleTypeGroup_Ships">Navios</String>
+  <String key="VehicleTypeGroup_Trains">Trens</String>
+  <String key="VehicleTypeGroup_Trucks">Caminhões</String>
+</Translations>

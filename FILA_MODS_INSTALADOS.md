@@ -14,11 +14,11 @@ confirmar).
 - [x] Better Train Boarding (2773460744) — feito, pt-BR
 - [x] Birdcage - More Chirper controls (649147853) — feito, pt-BR (só descrição; tela de opções pendente, ver README)
 - [x] Breakdown (2439120274) — feito, pt-BR
-- [ ] Broken Nodes Detector (1777173984)
-- [ ] Building Spawn Points (2511258910)
-- [ ] Bulldoze It! (1627986403)
-- [ ] Check Road Access for Growables (2454302667)
-- [ ] Commuter Destination (2475986859)
+- [x] Broken Nodes Detector (1777173984) — feito, pt-BR (só descrição; telas das ferramentas pendentes)
+- [x] Building Spawn Points (2511258910) — feito, pt-BR (UI principal; nomes de veículo individuais pendentes)
+- [x] Bulldoze It! (1627986403) — feito, pt-BR
+- [x] Check Road Access for Growables (2454302667) — feito, pt-BR
+- [x] Commuter Destination (2475986859) — feito, pt-BR
 - [ ] Custom Effect Loader (1886877404)
 - [ ] Demographics (2074258904)
 - [ ] Empty It! (1661072176)

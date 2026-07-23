@@ -74,6 +74,11 @@ tela por tela em jogo (ver status por módulo abaixo).
 | [Better Train Boarding](https://steamcommunity.com/sharedfiles/filedetails/?id=2773460744) ([código-fonte](https://github.com/Vectorial1024/BetterTrainBoarding)) | Vectorial1024 | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
 | [Birdcage - More Chirper controls](https://steamcommunity.com/sharedfiles/filedetails/?id=649147853) ([código-fonte](https://github.com/SexyFishHorse/CitiesSkylines-Birdcage)) | SexyFishHorse | **mod instalado nesta máquina** - só a descrição, tela de opções fora de escopo por ora (ver notas) | pt-BR apenas (rascunho não verificado) |
 | [Breakdown](https://steamcommunity.com/sharedfiles/filedetails/?id=2439120274) ([código-fonte](https://github.com/whyoh/CitiesBreakdown)) | whyoh | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+| [Broken Nodes Detector](https://steamcommunity.com/sharedfiles/filedetails/?id=1777173984) ([código-fonte](https://github.com/CitiesSkylinesMods/BrokenNodeDetector)) | CitiesSkylinesMods | **mod instalado** - só a descrição, telas de cada ferramenta fora de escopo por ora | pt-BR apenas (rascunho não verificado) |
+| [Building Spawn Points](https://steamcommunity.com/sharedfiles/filedetails/?id=2511258910) ([código-fonte](https://github.com/MacSergey/BuildingSpawnPoints)) | MacSergey | **mod instalado** - já tinha pt-PT mas não pt-BR; UI principal traduzida, nomes de veículo individuais fora de escopo por ora | pt-BR apenas (rascunho não verificado) |
+| [Bulldoze It!](https://steamcommunity.com/sharedfiles/filedetails/?id=1627986403) ([código-fonte](https://github.com/keallu/CSL-BulldozeIt)) | Keallu | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+| [Check Road Access for Growables](https://steamcommunity.com/sharedfiles/filedetails/?id=2454302667) ([código-fonte](https://github.com/DaEgi01/CitiesSkylines-CheckRoadAccessForGrowables)) | egi | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+| [Commuter Destination](https://steamcommunity.com/sharedfiles/filedetails/?id=2475986859) ([código-fonte](https://github.com/Jameskmonger/CSL-ShowCommuterDestination)) | Jameskmonger | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
 
 **Mods instalados sem módulo próprio, porque já vêm com pt-BR oficial embutido** (nada a fazer no ModBabel):
 - [81 Tiles 2](https://github.com/algernon-A/EightyOne2) - `Translations/pt-BR.csv` completo no próprio mod
@@ -179,6 +184,32 @@ tela por tela em jogo (ver status por módulo abaixo).
   sem campo interceptável. Traduzir exigiria reimplementar o método
   inteiro via reflection encadeada - desproporcional pro tamanho da
   tela (5 checkboxes/botões) nesta primeira passada, fica pra depois.
+
+### Notas sobre o lote Broken Nodes Detector, Building Spawn Points, Bulldoze It!, Check Road Access for Growables e Commuter Destination
+
+- **Broken Nodes Detector**: mod grande com 8 ferramentas de diagnóstico
+  independentes, cada uma com textos hardcoded espalhados em arquivos
+  diferentes. Só a descrição foi traduzida por ora - as telas de cada
+  ferramenta ficam pendentes (baixo uso, mod usado ocasionalmente).
+- **Building Spawn Points**: mesmo framework ModsCommon do Advanced Stop
+  Selection (mesmo autor). Diferente do Advanced Stop Selection, este
+  mod já tinha **pt-PT** (português europeu) embutido, mas não pt-BR -
+  primeiro caso de "framework bom, só falta o idioma específico".
+  Traduzida a UI principal do painel (Panel_*/Tool_*/Property_*/
+  Settings_*/PointType_*/VehicleTypeGroup_*); os 46 nomes individuais de
+  veículo (VehicleType_*) e o changelog de cada versão ficam de fora por
+  ora.
+- **Bulldoze It!** (Keallu): mesmo padrão do Play It! - `OnSettingsUI`
+  com textos hardcoded no `UIHelper` padrão, sem UIPanel customizado
+  desta vez. Prefix reimplementa a tela inteira traduzida.
+- **Check Road Access for Growables**: `OnSettingsUI` monta UI diferente
+  se está em jogo ou não, em métodos privados separados - Postfix com o
+  `UiTreeTranslator` genérico em cada um, evitando reimplementar lógica
+  real do jogo (SimulationManager/BuildingManager).
+- **Commuter Destination**: mod composto por 2 DLLs
+  (`CommuterDestination.Core.dll` + `CommuterDestination.CS1.dll`) -
+  detectamos pela presença da segunda. UI simples (grupo "Integrations"
+  com 1 label dinâmico), coberta pelo `UiTreeTranslator`.
 
 ### Notas sobre o módulo Rainfall
 

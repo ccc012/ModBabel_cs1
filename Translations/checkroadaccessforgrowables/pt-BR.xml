@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Mostra se você cortou o acesso à via para lotes de crescimento espontâneo.</String>
+  <String key="Recheck road access">Reconferir acesso à via</String>
+  <String key="This mod can only be used during gameplay.">Este mod só pode ser usado durante uma partida.</String>
+  <String key="Recheck road access completed. Look for 'No Road Access' icons on your map.">Reconferência de acesso à via concluída. Procure os ícones de "Sem Acesso à Via" no seu mapa.</String>
+</Translations>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Veja o destino de todos os passageiros esperando em um ponto de transporte público.</String>
+  <String key="Integrations">Integrações</String>
+  <String key="Improved Public Transport 2: Detected">Improved Public Transport 2: Detectado</String>
+  <String key="Improved Public Transport 2: Not detected">Improved Public Transport 2: Não detectado</String>
+</Translations>

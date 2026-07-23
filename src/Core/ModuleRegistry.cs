@@ -23,6 +23,11 @@ namespace ModBabel.Core
             new Modules.BetterTrainBoarding.BetterTrainBoardingModule(),
             new Modules.Birdcage.BirdcageModule(),
             new Modules.Breakdown.BreakdownModule(),
+            new Modules.BrokenNodeDetector.BrokenNodeDetectorModule(),
+            new Modules.BuildingSpawnPoints.BuildingSpawnPointsModule(),
+            new Modules.BulldozeIt.BulldozeItModule(),
+            new Modules.CheckRoadAccessForGrowables.CheckRoadAccessForGrowablesModule(),
+            new Modules.CommuterDestination.CommuterDestinationModule(),
             // new Modules.ModuloExemplo.ModuloExemplo(), // template, não ativar
         };
 
