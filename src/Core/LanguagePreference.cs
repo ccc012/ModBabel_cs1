@@ -16,7 +16,7 @@ namespace ModBabel.Core
                 return _idiomaEmCache;
 
             var caminho = CaminhoConfig();
-            _idiomaEmCache = File.Exists(caminho)
+            _idiomaEmCache = caminho != null && File.Exists(caminho)
                 ? File.ReadAllText(caminho).Trim()
                 : IdiomaPadrao;
 
@@ -26,15 +26,20 @@ namespace ModBabel.Core
         public static void Definir(string idioma)
         {
             _idiomaEmCache = idioma;
-            File.WriteAllText(CaminhoConfig(), idioma);
+
+            var caminho = CaminhoConfig();
+            if (caminho != null)
+                File.WriteAllText(caminho, idioma);
+
             TranslationEngine.LimparCache();
         }
 
         private static string CaminhoConfig()
         {
-            var pastaModulo = Path.GetDirectoryName(
-                typeof(LanguagePreference).Assembly.Location);
-            return Path.Combine(pastaModulo, "modbabel_idioma.cfg");
+            var pastaMod = ModFolder.Caminho();
+            return string.IsNullOrEmpty(pastaMod)
+                ? null
+                : Path.Combine(pastaMod, "modbabel_idioma.cfg");
         }
     }
 }

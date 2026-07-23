@@ -36,11 +36,13 @@ namespace ModBabel.Core
 
         public static string[] IdiomasDisponiveis()
         {
+            var pastaMod = ModFolder.Caminho();
+            if (string.IsNullOrEmpty(pastaMod))
+                return new[] { "en" };
+
             // Idiomas conhecidos = união de todos os arquivos .xml
             // encontrados em qualquer pasta Translations/[modulo]/
-            var pastaBase = Path.Combine(
-                Path.GetDirectoryName(typeof(TranslationEngine).Assembly.Location),
-                "Translations");
+            var pastaBase = Path.Combine(pastaMod, "Translations");
 
             if (!Directory.Exists(pastaBase))
                 return new[] { "en" };
@@ -59,9 +61,12 @@ namespace ModBabel.Core
         {
             var resultado = new Dictionary<string, string>();
 
+            var pastaMod = ModFolder.Caminho();
+            if (string.IsNullOrEmpty(pastaMod))
+                return resultado; // sem pasta resolvida = tudo cai no fallback
+
             var caminho = Path.Combine(Path.Combine(Path.Combine(
-                Path.GetDirectoryName(typeof(TranslationEngine).Assembly.Location),
-                "Translations"), moduloId), idioma + ".xml");
+                pastaMod, "Translations"), moduloId), idioma + ".xml");
 
             if (!File.Exists(caminho))
                 return resultado; // sem arquivo = tudo cai no fallback (texto original)
