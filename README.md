@@ -71,6 +71,9 @@ tela por tela em jogo (ver status por módulo abaixo).
 | [Better Budget](https://steamcommunity.com/sharedfiles/filedetails/?id=420972688) ([código-fonte](https://github.com/un0btanium/BetterBudget)) | unobtanium, airenelias | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
 | [Better Education Toolbar](https://steamcommunity.com/sharedfiles/filedetails/?id=2810536248) ([código-fonte](https://github.com/t1a2l/BetterEducationToolbar)) | t1a2l, Chamëleon TBN | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
 | [Better HealthCare Toolbar](https://steamcommunity.com/sharedfiles/filedetails/?id=2559042012) ([código-fonte](https://github.com/t1a2l/BetterHealthCareToolbar)) | t1a2l | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+| [Better Train Boarding](https://steamcommunity.com/sharedfiles/filedetails/?id=2773460744) ([código-fonte](https://github.com/Vectorial1024/BetterTrainBoarding)) | Vectorial1024 | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+| [Birdcage - More Chirper controls](https://steamcommunity.com/sharedfiles/filedetails/?id=649147853) ([código-fonte](https://github.com/SexyFishHorse/CitiesSkylines-Birdcage)) | SexyFishHorse | **mod instalado nesta máquina** - só a descrição, tela de opções fora de escopo por ora (ver notas) | pt-BR apenas (rascunho não verificado) |
+| [Breakdown](https://steamcommunity.com/sharedfiles/filedetails/?id=2439120274) ([código-fonte](https://github.com/whyoh/CitiesBreakdown)) | whyoh | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
 
 **Mods instalados sem módulo próprio, porque já vêm com pt-BR oficial embutido** (nada a fazer no ModBabel):
 - [81 Tiles 2](https://github.com/algernon-A/EightyOne2) - `Translations/pt-BR.csv` completo no próprio mod
@@ -159,6 +162,23 @@ tela por tela em jogo (ver status por módulo abaixo).
   próprio texto (antes do " - "), evitando o risco de declarar um
   parâmetro de enum interno (não referenciado em tempo de compilação)
   na assinatura do Postfix do Harmony.
+
+### Notas sobre Better Train Boarding, Birdcage e Breakdown
+
+- **Better Train Boarding** e **Breakdown**: mods pequenos, só patches
+  Harmony sem tela de opções - único texto traduzido é a descrição no
+  Content Manager.
+- **Birdcage**: `Description` é um `override` normal de uma classe base
+  (`UserModBase`) vinda de outro assembly de fato separado
+  (`SexyFishHorse.CitiesSkylines.Infrastructure.dll`, ao contrário do
+  ModsCommon/AlgernonCommons que são "shared projects" compilados
+  dentro do próprio mod). **Pendência**: a tela de opções (Appearance/
+  Behaviour/Debugging) usa um wrapper próprio do autor
+  (`IStronglyTypedUIHelper`) em vez do `ICities.UIHelperBase` direto -
+  os textos são literais passados direto pros métodos desse wrapper,
+  sem campo interceptável. Traduzir exigiria reimplementar o método
+  inteiro via reflection encadeada - desproporcional pro tamanho da
+  tela (5 checkboxes/botões) nesta primeira passada, fica pra depois.
 
 ### Notas sobre o módulo Rainfall
 

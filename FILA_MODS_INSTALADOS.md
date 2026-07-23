@@ -11,9 +11,9 @@ confirmar).
 - [x] Better Budget (420972688) — feito, pt-BR
 - [x] Better Education Toolbar (2810536248) — feito, pt-BR
 - [x] Better HealthCare Toolbar (2559042012) — feito, pt-BR
-- [ ] Better Train Boarding (2773460744)
-- [ ] Birdcage - More Chirper controls (649147853)
-- [ ] Breakdown (2439120274)
+- [x] Better Train Boarding (2773460744) — feito, pt-BR
+- [x] Birdcage - More Chirper controls (649147853) — feito, pt-BR (só descrição; tela de opções pendente, ver README)
+- [x] Breakdown (2439120274) — feito, pt-BR
 - [ ] Broken Nodes Detector (1777173984)
 - [ ] Building Spawn Points (2511258910)
 - [ ] Bulldoze It! (1627986403)

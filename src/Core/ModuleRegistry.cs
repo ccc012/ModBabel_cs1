@@ -20,6 +20,9 @@ namespace ModBabel.Core
             new Modules.BetterBudget.BetterBudgetModule(),
             new Modules.BetterEducationToolbar.BetterEducationToolbarModule(),
             new Modules.BetterHealthCareToolbar.BetterHealthCareToolbarModule(),
+            new Modules.BetterTrainBoarding.BetterTrainBoardingModule(),
+            new Modules.Birdcage.BirdcageModule(),
+            new Modules.Breakdown.BreakdownModule(),
             // new Modules.ModuloExemplo.ModuloExemplo(), // template, não ativar
         };
 
