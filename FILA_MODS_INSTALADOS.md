@@ -8,9 +8,9 @@ confirmar).
 - [x] ACME (2778750497) — já vem com pt-BR oficial embutido, nada a fazer
 - [x] Advanced Stop Selection Revisited (2862973068) — feito, pt-BR
 - [x] Auto Line Budget (2349240408) — feito, pt-BR
-- [ ] Better Budget (420972688)
-- [ ] Better Education Toolbar (2810536248)
-- [ ] Better HealthCare Toolbar (2559042012)
+- [x] Better Budget (420972688) — feito, pt-BR
+- [x] Better Education Toolbar (2810536248) — feito, pt-BR
+- [x] Better HealthCare Toolbar (2559042012) — feito, pt-BR
 - [ ] Better Train Boarding (2773460744)
 - [ ] Birdcage - More Chirper controls (649147853)
 - [ ] Breakdown (2439120274)
@@ -86,3 +86,18 @@ Harmony (2040656402), Prefab Hook (530771650), UnifiedUI/UUI (2966990700,
 biblioteca de toolbar compartilhada - revisitar depois se sobrar tempo).
 
 Também já suportado, mas não instalado nesta máquina: Play It! (Keallu).
+
+## Pendência: idiomas faltando em mods que já têm sistema próprio
+
+Mods como 81 Tiles 2 e ACME (framework AlgernonCommons) já cobrem pt-BR
+e a maioria dos nossos 17 idiomas nativamente, mas não têm todos - por
+exemplo, faltam árabe (`ar`) e grego (`el`) nos dois. Quando terminarmos
+a primeira passada pt-BR em todos os mods da fila acima, precisamos
+voltar em cada mod com sistema de tradução próprio e conferir quais dos
+nossos 17 idiomas faltam, pra decidir a estratégia (patch complementar
+no ModBabel só pros idiomas ausentes, sem duplicar o que o mod já
+cobre bem sozinho).
+
+- [ ] 81 Tiles 2 - confirmar idiomas faltando (sabido: ar, el)
+- [ ] ACME - confirmar idiomas faltando (sabido: ar, el)
+- [ ] Advanced Stop Selection - framework ModsCommon, conferir cobertura completa

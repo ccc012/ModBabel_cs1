@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Acesso mais rápido aos controles de orçamento dos serviços
+
+criado por unobtanium
+corrigido por airenelias</String>
+  <String key="Custom Budget Panel">Painel de Orçamento Personalizado</String>
+  <String key="Custom Budget Editor">Editor de Orçamento Personalizado</String>
+  <String key="Apply">Aplicar</String>
+  <String key="Budget Editor">Editor de Orçamento</String>
+  <String key="Create Custom Panel">Criar Painel Personalizado</String>
+</Translations>

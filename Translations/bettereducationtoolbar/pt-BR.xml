@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Separa a barra de ferramentas de Educação em quatro categorias - Ensino Fundamental, Ensino Médio, Universidade e Biblioteca</String>
+  <String key="Elementary">Ensino Fundamental - Uma escola para educação primária de crianças. Geralmente vem depois da pré-escola e antes do ensino médio.</String>
+  <String key="HighSchool">Ensino Médio - Uma instituição que oferece educação secundária.</String>
+  <String key="Library">Biblioteca - Oferece áreas silenciosas e propícias para estudo, estudo em grupo, colaboração e recursos eletrônicos.</String>
+  <String key="University">Universidade - Uma instituição de ensino superior (ou terciário) e pesquisa que concede diplomas acadêmicos em várias disciplinas.</String>
+</Translations>

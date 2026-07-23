@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Separa a barra de ferramentas de Saúde em cinco categorias - Saúde, Funerária, Cuidado Infantil, Cuidado do Idoso e Cuidado Recreativo</String>
+  <String key="HealthCare">Saúde - Hospitais, clínicas e basicamente todos os serviços relacionados a médicos</String>
+  <String key="DeathCare">Funerária - Cemitérios, crematórios e tudo relacionado à vida após a morte</String>
+  <String key="ChildCare">Cuidado Infantil - Orfanatos, casas de acolhimento, creches, cuidando da juventude da cidade</String>
+  <String key="ElderCare">Cuidado do Idoso - Casas de repouso, moradia assistida, cuidando dos idosos da cidade</String>
+  <String key="RecreationalCare">Cuidado Recreativo - Academias, piscinas, saunas e prédios comunitários da vizinhança</String>
+</Translations>

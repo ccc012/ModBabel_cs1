@@ -68,6 +68,9 @@ tela por tela em jogo (ver status por módulo abaixo).
 | [Play It!](https://steamcommunity.com/sharedfiles/filedetails/?id=2741726428) ([código-fonte](https://github.com/keallu/CSL-PlayIt)) | Keallu | feito sem o mod instalado nesta máquina - compila, mas **nunca foi aberto em jogo** | pt-BR apenas (rascunho não verificado) |
 | [Advanced Stop Selection](https://steamcommunity.com/sharedfiles/filedetails/?id=2862973068) ([código-fonte](https://github.com/MacSergey/ImprovedStopSelection)) | BloodyPenguin, macsergey | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
 | [Auto Line Budget 21](https://steamcommunity.com/sharedfiles/filedetails/?id=2349240408) ([código-fonte](https://github.com/jakeluba/AutoLineBudget21)) | jakeluba | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+| [Better Budget](https://steamcommunity.com/sharedfiles/filedetails/?id=420972688) ([código-fonte](https://github.com/un0btanium/BetterBudget)) | unobtanium, airenelias | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+| [Better Education Toolbar](https://steamcommunity.com/sharedfiles/filedetails/?id=2810536248) ([código-fonte](https://github.com/t1a2l/BetterEducationToolbar)) | t1a2l, Chamëleon TBN | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
+| [Better HealthCare Toolbar](https://steamcommunity.com/sharedfiles/filedetails/?id=2559042012) ([código-fonte](https://github.com/t1a2l/BetterHealthCareToolbar)) | t1a2l | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
 
 **Mods instalados sem módulo próprio, porque já vêm com pt-BR oficial embutido** (nada a fazer no ModBabel):
 - [81 Tiles 2](https://github.com/algernon-A/EightyOne2) - `Translations/pt-BR.csv` completo no próprio mod
@@ -137,6 +140,25 @@ tela por tela em jogo (ver status por módulo abaixo).
   e patchar `MessageManager.TryCreateMessage` (usado por dezenas de
   sistemas do próprio jogo) só pra essas duas frases seria frágil demais
   pro ganho.
+
+### Notas sobre Better Budget, Better Education Toolbar e Better HealthCare Toolbar
+
+- **Better Budget**: sem sistema de tradução, monta 3 painéis
+  customizados do zero (mesmo padrão do Play It! - método público
+  `initialize(...)` que constrói tudo), reaproveitando o
+  `UiTreeTranslator` genérico.
+- **Better Education/HealthCare Toolbar** (mesmo autor, t1a2l, código
+  quase idêntico entre os dois): `Mod.Description` é implementação
+  **explícita** de interface (`string IUserMod.Description => ...`) -
+  o método compilado se chama `ICities.IUserMod.get_Description`, não
+  `get_Description`, porque é assim que o compilador C# nomeia
+  implementações explícitas de interface (confirmado via reflection
+  contra a DLL instalada). Os tooltips dos botões de categoria vêm de
+  um método `GetTooltip(enum)` que devolve texto no formato
+  "NomeDaCategoria - descrição" - a chave de tradução é extraída do
+  próprio texto (antes do " - "), evitando o risco de declarar um
+  parâmetro de enum interno (não referenciado em tempo de compilação)
+  na assinatura do Postfix do Harmony.
 
 ### Notas sobre o módulo Rainfall
 

@@ -17,6 +17,9 @@ namespace ModBabel.Core
             new Modules.PlayIt.PlayItModule(),
             new Modules.AdvancedStopSelection.AdvancedStopSelectionModule(),
             new Modules.AutoLineBudget.AutoLineBudgetModule(),
+            new Modules.BetterBudget.BetterBudgetModule(),
+            new Modules.BetterEducationToolbar.BetterEducationToolbarModule(),
+            new Modules.BetterHealthCareToolbar.BetterHealthCareToolbarModule(),
             // new Modules.ModuloExemplo.ModuloExemplo(), // template, não ativar
         };
 
