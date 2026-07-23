@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="en">
+  <String key="Mod_Description">Allows to explicitly specify platform when pressing Shift</String>
+</Translations>

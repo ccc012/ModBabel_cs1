@@ -15,6 +15,7 @@ namespace ModBabel.Core
         {
             new Modules.Rainfall.RainfallModule(),
             new Modules.PlayIt.PlayItModule(),
+            new Modules.AdvancedStopSelection.AdvancedStopSelectionModule(),
             // new Modules.ModuloExemplo.ModuloExemplo(), // template, não ativar
         };
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Permite especificar explicitamente a plataforma ao pressionar Shift</String>
+  <String key="Mod_WhatsNewMessage2_0">[NOVO] Adicionado suporte à DLC Plazas &amp; Promenades.
+[ATUALIZADO] Migrado para o Harmony.</String>
+  <String key="Mod_WhatsNewMessage2_1">[NOVO] Adicionado suporte ao Hubs &amp; Transport.
+[ATUALIZADO] Interface atualizada</String>
+  <String key="Mod_WhatsNewMessage2_2">[ATUALIZADO] Versão exigida do jogo atualizada para 1.18.1-f3</String>
+  <String key="Mod_WhatsNewMessage2_3">[ATUALIZADO] O mod é compatível com a versão 1.21.1-f5 do jogo</String>
+</Translations>

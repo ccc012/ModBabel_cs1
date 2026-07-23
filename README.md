@@ -66,6 +66,7 @@ tela por tela em jogo (ver status por módulo abaixo).
 |---|---|---|---|
 | [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | pt-BR verificado tela por tela em jogo; demais idiomas são rascunhos ainda não verificados visualmente | 17/17 (ver tabela acima) |
 | [Play It!](https://steamcommunity.com/sharedfiles/filedetails/?id=2741726428) ([código-fonte](https://github.com/keallu/CSL-PlayIt)) | Keallu | feito sem o mod instalado nesta máquina - compila, mas **nunca foi aberto em jogo** | pt-BR apenas (rascunho não verificado) |
+| [Advanced Stop Selection](https://steamcommunity.com/sharedfiles/filedetails/?id=2862973068) ([código-fonte](https://github.com/MacSergey/ImprovedStopSelection)) | BloodyPenguin, macsergey | **mod instalado nesta máquina** - compila, aguardando teste em jogo | pt-BR apenas (rascunho não verificado) |
 
 ### Notas sobre o módulo Play It!
 
@@ -89,6 +90,31 @@ tela por tela em jogo (ver status por módulo abaixo).
   Content Manager em jogo, comparando cada texto.
 - Limitação conhecida: o texto "Game"/"System" do relógio flutuante
   (alternado com duplo-clique) não foi traduzido nesta versão.
+
+### Notas sobre o módulo Advanced Stop Selection
+
+- Diferente dos outros dois, este mod já usa um framework próprio de
+  localização (ModsCommon, compartilhado entre vários mods do mesmo
+  autor - Node Controller, Intersection Marking Tool etc.), com
+  arquivos `.resx` e fallback por `CultureInfo`. Já vem com inglês e
+  russo prontos.
+- Como o ModsCommon é um "shared project" (`.projitems`), cada mod
+  compila sua própria cópia do tipo `ModsCommon.LocalizeManager` dentro
+  do próprio assembly - não é uma DLL compartilhada entre mods
+  instalados. O patch busca esse tipo especificamente dentro do
+  assembly `AdvancedStopSelection` (não com uma busca global por nome),
+  pra não pegar a cópia de outro mod do mesmo autor instalado junto.
+- O texto específico deste mod é pequeno: só a descrição (Content
+  Manager) e as mensagens de "O que há de novo" de cada versão. O
+  patch traduz pela **chave do recurso** (ex: `Mod_Description`), não
+  pelo texto em si - mais estável entre idiomas.
+- Fora de escopo por ora: as strings genéricas do próprio framework
+  ModsCommon (abas "General"/"Notifications" etc.) - são muitas e
+  compartilhadas entre vários mods do autor, ficam sem tradução por
+  enquanto (fallback automático pro texto original).
+- Feito sem testar em jogo ainda, apesar do mod estar instalado nesta
+  máquina - falta abrir o Content Manager e conferir a descrição/texto
+  de changelog.
 
 ### Notas sobre o módulo Rainfall
 
