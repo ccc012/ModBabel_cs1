@@ -9,7 +9,7 @@ namespace ModBabel.Modules.Birdcage.Patches
     {
         static MethodBase TargetMethod() =>
             AccessTools.PropertyGetter(
-                AccessTools.TypeByName("SexyFishHorse.CitiesSkylines.Birdcage.BirdcageUserMod"), "Description");
+                AccessTools.TypeByName("SexyFishHorse.CitiesSkylines.Birdcage.UserMod"), "Description");
 
         [HarmonyPostfix]
         public static void Postfix(ref string __result)

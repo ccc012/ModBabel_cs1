@@ -11,10 +11,19 @@ namespace ModBabel.Modules.Birdcage
     // - AssemblyName real = "SexyFishHorse.CitiesSkylines.Birdcage"
     //   (dll instalada: SexyFishHorse.CitiesSkylines.Birdcage.dll)
     // - Description é override normal (não implementação explícita de
-    //   interface) de uma classe base UserModBase vinda de outro
-    //   assembly separado (SexyFishHorse.CitiesSkylines.Infrastructure.dll,
-    //   de fato outra DLL, não um shared project como ModsCommon/
-    //   AlgernonCommons) - AccessTools.PropertyGetter funciona direto.
+    //   interface) de uma classe base UserModWithOptionsBase vinda de
+    //   outro assembly separado (SexyFishHorse.CitiesSkylines.
+    //   Infrastructure.dll, de fato outra DLL, não um shared project
+    //   como ModsCommon/AlgernonCommons) - AccessTools.PropertyGetter
+    //   funciona direto mesmo a propriedade sendo herdada.
+    // - CUIDADO: a classe principal do mod se chama só "UserMod" no
+    //   binário instalado via Workshop (não "BirdcageUserMod" como no
+    //   código-fonte público no GitHub) - mesma divergência
+    //   fonte-vs-binário já vista no Rainfall. Confirmado via reflection
+    //   direta contra a DLL instalada (2026-07-24), depois que o nome
+    //   errado (baseado só na leitura do código-fonte, sem conferir o
+    //   binário) causou um crash real no carregamento de mods do jogo -
+    //   ver ModuleRegistry.cs para a blindagem adicionada depois disso.
     // - PENDÊNCIA: a tela de opções (Appearance/Behaviour/Debugging,
     //   5 checkboxes/botões) usa um wrapper próprio do autor
     //   (IStronglyTypedUIHelper, da Infrastructure.dll) em vez do

@@ -46,8 +46,29 @@ namespace ModBabel.Core
                     continue;
                 }
 
-                modulo.AplicarPatches(harmony);
-                UnityEngine.Debug.Log($"[ModBabel] Módulo '{modulo.ModuloId}' ativado.");
+                // Cada módulo é aplicado dentro do próprio try/catch:
+                // um nome de classe/campo errado (ex: código-fonte
+                // público divergente do binário publicado no Workshop -
+                // já aconteceu com Birdcage, TargetMethod() retornando
+                // null) faz o Harmony lançar HarmonyException dentro de
+                // PatchClassProcessor.Patch(). Sem isso, a exceção subia
+                // até PluginManager.AddPlugins e derrubava o
+                // carregamento de TODOS os mods do jogo - não só o
+                // ModBabel (visto em jogo, 2026-07-24). Um módulo
+                // quebrado agora só falha ele mesmo; os outros
+                // continuam funcionando normalmente.
+                try
+                {
+                    modulo.AplicarPatches(harmony);
+                    UnityEngine.Debug.Log($"[ModBabel] Módulo '{modulo.ModuloId}' ativado.");
+                }
+                catch (Exception e)
+                {
+                    UnityEngine.Debug.LogError(
+                        $"[ModBabel] Falha ao ativar o módulo '{modulo.ModuloId}' - " +
+                        "esse mod específico não será traduzido, mas o restante do " +
+                        $"ModBabel e dos outros mods continua funcionando normalmente. Erro: {e}");
+                }
             }
         }
     }
