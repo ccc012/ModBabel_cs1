@@ -1,0 +1,11 @@
+# Build outputs
+bin/
+obj/
+
+# Editor
+.vs/
+.vscode/
+*.user
+
+# Config local (caminhos de máquina específicos)
+*.local.props

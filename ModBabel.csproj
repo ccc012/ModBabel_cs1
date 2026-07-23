@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+    <!-- Ajustar conforme a versão exata usada pelo CS1/Mono instalado -->
+    <AssemblyName>ModBabel</AssemblyName>
+    <LangVersion>7.3</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CitiesHarmony.API" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Definir CSKY_MANAGED como variável de ambiente apontando para
+         .../Cities_Skylines/Cities_Data/Managed/ antes de compilar -->
+    <Reference Include="ICities">
+      <HintPath>$(CSKY_MANAGED)\ICities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ColossalManaged">
+      <HintPath>$(CSKY_MANAGED)\ColossalManaged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(CSKY_MANAGED)\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(CSKY_MANAGED)\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Arquivos de tradução são copiados para a pasta de saída junto
+         com a DLL, para serem distribuídos com o mod -->
+    <None Include="Translations\**\*.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

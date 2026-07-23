@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Referência em inglês (idioma original do mod-alvo). Não é
+  estritamente necessário carregar este arquivo em runtime (o
+  fallback já usa o texto original passado a TranslationEngine.Traduzir),
+  mas serve como documentação de quais chaves existem.
+-->
+<Translations lang="en">
+    <String key="LABEL_ALGUMA_COISA">Some Text</String>
+</Translations>
