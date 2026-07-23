@@ -30,7 +30,7 @@ os textos que cada mod original desenha na interface.
 
 | Mod original | Autor | Status | Idiomas |
 |---|---|---|---|
-| [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | strings extraídas, patch escrito, **não testado no jogo ainda** | pt-BR |
+| [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | compila sem erros, **não testado no jogo ainda** | pt-BR |
 
 ### Notas sobre o módulo Rainfall
 
@@ -45,16 +45,35 @@ os textos que cada mod original desenha na interface.
   único patch que envolve o `UIHelperBase` recebido por
   `SetUpOptions` num wrapper tradutor (`TranslatingUIHelper`), em vez
   de um patch por string/painel.
-- Pendências conhecidas antes de considerar "testado":
-  - Confirmar no dnSpy (contra a `.dll` instalada) que
+- **Build verificado nesta máquina** (2026-07-23): `dotnet build` compila
+  com 0 erros/0 avisos contra o `ICities.dll`/`ColossalManaged.dll`/
+  `Assembly-CSharp.dll`/`UnityEngine.dll` reais da instalação local do
+  CS1. A assinatura de `ICities.UIHelperBase` foi confirmada por
+  reflection contra a DLL instalada (bate com o que o `TranslatingUIHelper`
+  espera - não tem membro `self`, os outros métodos batem exatamente).
+- Pendências conhecidas antes de considerar "testado no jogo":
+  - Confirmar no dnSpy (contra a `.dll` do Rainfall instalada) que
     `Rainfall.UI.OptionHandler.SetUpOptions` é o nome/assinatura real
     (extraído do código-fonte público, pode ter mudado em alguma
-    atualização não sincronizada com o GitHub)
-  - Confirmar a assinatura exata de `ICities.UIHelperBase` contra o
-    `ICities.dll` instalado
+    atualização não sincronizada com o GitHub) - não pôde ser
+    verificado aqui porque o mod Rainfall não está instalado nesta
+    máquina
   - O botão "Reset [nome do grupo]" usa um texto montado
     dinamicamente por grupo - ainda não capturado no XML de tradução
   - Rodar o checklist completo de `07_TESTES_ESTRATEGIA.md` (vault)
+    (requer ter o mod Rainfall + Harmony instalados e o jogo aberto)
+
+## Como compilar
+
+```
+# Definir o caminho da pasta Managed do CS1 (ajustar se instalado em
+# outro lugar) e compilar:
+CSKY_MANAGED="C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed" dotnet build
+```
+
+A DLL final e as traduções ficam em `bin/Debug/net35/` (ou `Release/`
+com `-c Release`), prontas para copiar para a pasta de mods do jogo:
+`%LOCALAPPDATA%\Colossal Order\Cities_Skylines\Addons\Mods\ModBabel\`
 
 ## Documentação de planejamento
 

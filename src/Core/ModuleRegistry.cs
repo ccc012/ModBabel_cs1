@@ -19,9 +19,8 @@ namespace ModBabel.Core
 
         public static void AtivarModulosDisponiveis(HarmonyLib.Harmony harmony)
         {
-            var assembliesCarregadas = AppDomain.CurrentDomain.GetAssemblies()
-                .Select(a => a.GetName().Name)
-                .ToHashSet();
+            var assembliesCarregadas = new HashSet<string>(
+                AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetName().Name));
 
             foreach (var modulo in TodosOsModulos)
             {

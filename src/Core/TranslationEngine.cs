@@ -59,9 +59,9 @@ namespace ModBabel.Core
         {
             var resultado = new Dictionary<string, string>();
 
-            var caminho = Path.Combine(
+            var caminho = Path.Combine(Path.Combine(Path.Combine(
                 Path.GetDirectoryName(typeof(TranslationEngine).Assembly.Location),
-                "Translations", moduloId, idioma + ".xml");
+                "Translations"), moduloId), idioma + ".xml");
 
             if (!File.Exists(caminho))
                 return resultado; // sem arquivo = tudo cai no fallback (texto original)

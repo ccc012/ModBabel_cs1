@@ -1,4 +1,3 @@
-using ColossalFramework.UI;
 using ICities;
 using ModBabel.Core;
 
@@ -27,8 +26,6 @@ namespace ModBabel.Modules.Rainfall
 
         private string T(string original) =>
             TranslationEngine.Traduzir(_moduloId, original, original);
-
-        public UIComponent self => _real.self;
 
         public UIHelperBase AddGroup(string text) =>
             new TranslatingUIHelper(_real.AddGroup(T(text)), _moduloId);
