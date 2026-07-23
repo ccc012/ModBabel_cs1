@@ -9,3 +9,6 @@ obj/
 
 # Config local (caminhos de máquina específicos)
 *.local.props
+
+# Pacotes de release (anexados manualmente ao GitHub Release, não versionados)
+*.zip

@@ -1,12 +1,46 @@
 # ModBabel
 
 Mod para **Cities: Skylines 1** que traduz outros mods do Steam Workshop
-para múltiplos idiomas — começando por **Português do Brasil (pt-BR)**.
+para múltiplos idiomas. Um único mod cobre vários mods originais e
+vários idiomas ao mesmo tempo — não é um tradutor de um mod só.
 
 Não modifica, não republica e não é afiliado a nenhum dos mods
 originais que traduz. Funciona como um add-on separado, interceptando
 em tempo de execução (via [Harmony](https://github.com/pardeike/Harmony))
 os textos que cada mod original desenha na interface.
+
+## Idiomas suportados
+
+17 idiomas, incluindo os 10 idiomas oficiais do jogo:
+
+| Idioma | Código | Idioma oficial do jogo? |
+|---|---|---|
+| Português (Brasil) | `pt-BR` | ✅ — **verificado tela por tela em jogo** |
+| Inglês | `en` | ✅ (referência/fallback) |
+| Francês | `fr` | ✅ |
+| Alemão | `de` | ✅ |
+| Espanhol (Espanha) | `es` | ✅ |
+| Polonês | `pl` | ✅ |
+| Russo | `ru` | ✅ |
+| Chinês simplificado | `zh-CN` | ✅ |
+| Coreano | `ko` | ✅ |
+| Japonês | `ja` | ✅ |
+| Italiano | `it` | — |
+| Chinês tradicional | `zh-TW` | — |
+| Árabe | `ar` | — |
+| Ucraniano | `uk` | — |
+| Grego | `el` | — |
+| Holandês | `nl` | — |
+| Turco | `tr` | — |
+
+O ModBabel não depende do idioma configurado no próprio jogo — você
+escolhe o idioma preferido separadamente na tela de opções do mod, e
+todos os módulos (mods traduzidos) respeitam essa escolha.
+
+**Regra do projeto:** todo módulo novo (mod original suportado) precisa
+cobrir todos os idiomas desta tabela antes de ser considerado completo.
+Idiomas além do pt-BR ainda são rascunhos de tradução não verificados
+tela por tela em jogo (ver status por módulo abaixo).
 
 ## Como funciona
 
@@ -30,7 +64,7 @@ os textos que cada mod original desenha na interface.
 
 | Mod original | Autor | Status | Idiomas |
 |---|---|---|---|
-| [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | compila, instalado localmente, **aguardando teste em jogo** | pt-BR |
+| [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | pt-BR verificado tela por tela em jogo; demais idiomas são rascunhos ainda não verificados visualmente | 17/17 (ver tabela acima) |
 
 ### Notas sobre o módulo Rainfall
 
