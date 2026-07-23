@@ -1,8 +1,11 @@
-# Fila de mods instalados para tradução pt-BR
+# Fila de mods instalados para tradução pt-BR + espanhol
 
-Ordem alfabética, lotes fixos de ~3-4 por rodada. Marcar [x] conforme
-completar (compilar + traduzir, mesmo sem testar em jogo até o usuário
-confirmar).
+Ordem alfabética, lotes fixos. Marcar [x] conforme completar (compilar +
+traduzir, mesmo sem testar em jogo até o usuário confirmar).
+
+**A partir de 2026-07-24**: todo mod novo processado ganha pt-BR **e**
+espanhol (antes era só pt-BR). Mods processados antes dessa data só têm
+pt-BR - revisitar depois pra adicionar espanhol neles também.
 
 - [x] 81 Tiles 2 (2862121823) — já vem com pt-BR oficial embutido, nada a fazer
 - [x] ACME (2778750497) — já vem com pt-BR oficial embutido, nada a fazer
@@ -19,26 +22,26 @@ confirmar).
 - [x] Bulldoze It! (1627986403) — feito, pt-BR
 - [x] Check Road Access for Growables (2454302667) — feito, pt-BR
 - [x] Commuter Destination (2475986859) — feito, pt-BR
-- [ ] Custom Effect Loader (1886877404)
-- [ ] Demographics (2074258904)
-- [ ] Empty It! (1661072176)
-- [ ] Enhanced Outside Connections View (2368396560)
-- [ ] Express Bus Services (2262054175)
-- [ ] Express Bus Services (TLM Plugin variation) (3015128256)
-- [ ] Extra Landscaping Tools (502750307)
-- [ ] Extra Train Station Tracks (515489008)
-- [ ] EYM: Enlighten Your Mouse (2455665392)
-- [ ] Favorite Cims Mod (3058339497)
-- [ ] Find It! 2 (2133885971)
-- [ ] First Person Camera - Continued (3198388677)
-- [ ] FPS Booster (2105755179)
-- [ ] Game Anarchy (2781804786)
-- [ ] Gravitative Cable Car (2094830335)
-- [ ] Hide TM:PE Crosswalks: Renewed (3682758360)
-- [ ] Hide TM:PE Unconnected Tracks Renewed (3704189586)
-- [ ] Improved Wind Simulation (627096876)
-- [ ] Intersection Marking Tool (2140418403)
-- [ ] Lifecycle Rebalance Revisited (2027161563)
+- [x] Custom Effect Loader (1886877404) — feito, pt-BR + es (só descrição)
+- [ ] Demographics (2074258904) — sem código-fonte público encontrado (autor Rentgen Rukogama), pendente
+- [x] Empty It! (1661072176) — feito, pt-BR + es
+- [ ] Enhanced Outside Connections View (2368396560) — checkboxes dinâmicos por recurso, precisa mais investigação, pendente
+- [x] Express Bus Services (2262054175) — feito, pt-BR + es
+- [ ] Express Bus Services (TLM Plugin: t1a2l Variation) (3015128256) — sem código-fonte público encontrado (fork t1a2l), pendente
+- [ ] Extra Landscaping Tools (502750307) — **já tem espanhol nativo** (Locale/spanish.xml), falta só pt-BR; sistema de tradução próprio usa método de INSTÂNCIA (GetTranslation, não estático) - mais complexo de patchar, pendente
+- [x] Extra Train Station Tracks (515489008) — feito, pt-BR + es (classe real "ElevatedTrainStationTrack.Mod", diferente do nome do mod/repo)
+- [x] EYM: Enlighten Your Mouse (2455665392) — feito, pt-BR + es (framework AlgernonCommons via AssemblyResolver)
+- [x] Favorite Cims Mod (3058339497) — feito, pt-BR + es, cobertura PARCIAL (~30 de ~150 chaves - UI principal só; faltam chaves de status detalhado de cidadão)
+- [x] Find It! 2 (2133885971) — **já tem pt-BR E espanhol nativos**, nada a fazer
+- [x] First Person Camera - Continued (3198388677) — **já tem pt-BR E espanhol nativos**, nada a fazer
+- [ ] FPS Booster (2105755179) — sem código-fonte público encontrado (autor Krzychu1245), pendente
+- [ ] Game Anarchy (2781804786) — sem código-fonte público encontrado, pendente
+- [x] Gravitative Cable Car (2094830335) — feito, pt-BR + es
+- [x] Hide TM:PE Crosswalks: Renewed (3682758360) — feito, pt-BR + es (classe real "HideCrosswalksRenewed.Lifecycle.HideCrosswalksRenewedMod", fork renomeado)
+- [x] Hide TM:PE Unconnected Tracks Renewed (3704189586) — feito, pt-BR + es (classe real "HideUnconnectedTracksRenewed.LifeCycle.CylisModInfo", fork renomeado)
+- [x] Improved Wind Simulation (627096876) — feito, pt-BR + es
+- [x] Intersection Marking Tool (2140418403) — **já tem pt-BR E espanhol nativos** (framework ModsCommon), nada a fazer
+- [x] Lifecycle Rebalance Revisited (2027161563) — **já tem pt-BR E espanhol nativos** (framework AlgernonCommons), nada a fazer
 - [ ] Line Tool (2956939040)
 - [ ] Loading Screen Mod Revisited (2858591409)
 - [ ] More CitizenUnits (2654364627)
@@ -101,3 +104,8 @@ cobre bem sozinho).
 - [ ] 81 Tiles 2 - confirmar idiomas faltando (sabido: ar, el)
 - [ ] ACME - confirmar idiomas faltando (sabido: ar, el)
 - [ ] Advanced Stop Selection - framework ModsCommon, conferir cobertura completa
+- [x] Extra Landscaping Tools - **confirmado**: tem inglês, chinês, francês, italiano, coreano, chinês simplificado, espanhol, chinês tradicional. Falta pt-BR (nosso principal) e vários outros dos nossos 17 (ar, uk, el, nl, tr, ja, ru, pl, de).
+- [ ] Find It! 2 - já tem pt-BR e es nativos, conferir os outros 15 idiomas nossos
+- [ ] First Person Camera - Continued - já tem pt-BR e es nativos (framework próprio, mesmas 20 chaves que outros mods do will258012), conferir os outros 15
+- [ ] Intersection Marking Tool - já tem pt-BR e es nativos (framework ModsCommon), conferir os outros 15
+- [ ] Lifecycle Rebalance Revisited - já tem pt-BR e es nativos (framework AlgernonCommons), conferir os outros 15

@@ -28,6 +28,16 @@ namespace ModBabel.Core
             new Modules.BulldozeIt.BulldozeItModule(),
             new Modules.CheckRoadAccessForGrowables.CheckRoadAccessForGrowablesModule(),
             new Modules.CommuterDestination.CommuterDestinationModule(),
+            new Modules.CustomEffectLoader.CustomEffectLoaderModule(),
+            new Modules.EmptyIt.EmptyItModule(),
+            new Modules.ExpressBusServices.ExpressBusServicesModule(),
+            new Modules.ExtraTrainStationTracks.ExtraTrainStationTracksModule(),
+            new Modules.EnlightenYourMouse.EnlightenYourMouseModule(),
+            new Modules.FavoriteCims.FavoriteCimsModule(),
+            new Modules.GravitativeCableCar.GravitativeCableCarModule(),
+            new Modules.HideCrosswalksRenewed.HideCrosswalksRenewedModule(),
+            new Modules.HideUnconnectedTracksRenewed.HideUnconnectedTracksRenewedModule(),
+            new Modules.RealisticWinds.RealisticWindsModule(),
             // new Modules.ModuloExemplo.ModuloExemplo(), // template, não ativar
         };
 

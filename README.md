@@ -61,8 +61,20 @@ Abaixo está a lista de mods que o ModBabel já consegue traduzir.
 | **Bulldoze It!**                    | Keallu                            | Suporte implementado (aguardando testes finais). |
 | **Check Road Access for Growables** | egi                               | Suporte implementado (aguardando testes finais). |
 | **Commuter Destination**            | Jameskmonger                      | Suporte implementado (aguardando testes finais). |
+| **Custom Effect Loader**            | boformer                          | pt-BR + espanhol (só descrição).                 |
+| **Empty It!**                       | Keallu                            | pt-BR + espanhol.                                |
+| **Express Bus Services**            | Vectorial1024                     | pt-BR + espanhol.                                |
+| **Extra Train Station Tracks**      | BloodyPenguin                     | pt-BR + espanhol.                                |
+| **EYM: Enlighten Your Mouse**       | algernon-A                        | pt-BR + espanhol.                                |
+| **Favorite Cims**                   | will258012                        | pt-BR + espanhol (cobertura parcial - só UI principal). |
+| **Gravitative Cable Car**           | sway2020                          | pt-BR + espanhol (só descrição).                 |
+| **Hide TM:PE Crosswalks: Renewed**  | (fork de kian.zarrin)             | pt-BR + espanhol (só descrição).                 |
+| **Hide TM:PE Unconnected Tracks Renewed** | (fork "cylismaori")          | pt-BR + espanhol (só descrição).                 |
+| **Improved Wind Simulation**        | BloodyPenguin                     | pt-BR + espanhol (só descrição).                 |
 
-*Nota: Mods como **81 Tiles 2** e **ACME** não precisam do ModBabel, pois já possuem pt-BR nativo.*
+**A partir de 2026-07-24, todo mod novo ganha pt-BR e espanhol juntos** (antes era só pt-BR - os mods acima desta linha na tabela ainda têm só pt-BR, espanhol fica pra depois).
+
+*Nota: alguns mods já vêm com tradução própria completa, sem precisar do ModBabel - **81 Tiles 2**, **ACME**, **Find It! 2**, **First Person Camera - Continued**, **Intersection Marking Tool** e **Lifecycle Rebalance Revisited** já têm pt-BR e espanhol nativos. **Extra Landscaping Tools** já tem espanhol nativo, mas ainda não pt-BR (pendente).*
 
 ---
 
@@ -78,7 +90,8 @@ O ModBabel não modifica, não republica e não é afiliado a nenhum dos mods or
 
 * **Troca de idioma ao vivo:** Todo componente traduzido pelo `UiTreeTranslator` (ou registrado manualmente nos patches que remontam telas do zero) fica salvo no `TranslatedComponentRegistry` junto com o texto original em inglês. Trocar o idioma reaplica a tradução em cada componente já existente, sem precisar que o jogo reconstrua nada. Cobre Play It!, Better Budget, Check Road Access for Growables, Commuter Destination e Bulldoze It!. Rainfall e os módulos baseados em ModsCommon/AlgernonCommons (Advanced Stop Selection, Building Spawn Points) ainda exigem reiniciar o jogo pra aplicar a troca.
 * **Play It! / Better Budget:** Utilizam painéis customizados (`UIPanel`) construídos do zero. O ModBabel aplica um Postfix genérico (`UiTreeTranslator`) após a montagem da UI para traduzir `UILabel`, `UIButton`, etc.
-* **Advanced Stop Selection / Building Spawn Points:** Mods que utilizam o framework *ModsCommon*. O patch busca o tipo `LocalizeManager` isolado no próprio assembly para não conflitar com outros mods do mesmo autor.
+* **Advanced Stop Selection / Building Spawn Points:** Mods que utilizam o framework *ModsCommon*, compilado DENTRO de cada mod (shared project). O patch busca o tipo `LocalizeManager` isolado no próprio assembly para não conflitar com outros mods do mesmo autor.
+* **EYM: Enlighten Your Mouse / Favorite Cims:** Mods que utilizam o framework *AlgernonCommons* - diferente do ModsCommon, é uma DLL separada de verdade, distribuída junto com cada mod. Isso significa que várias cópias dela podem estar carregadas ao mesmo tempo se o jogador tiver outros mods do mesmo autor. `Core/AssemblyResolver.cs` usa `PluginManager.GetAssemblies()` para achar a cópia exata pertencente ao mod certo antes de aplicar o patch.
 * **Rainfall:** Intercepta cada `Create(UIHelperBase)` das classes internas de opção via reflection, já que o mod recria abas nativas internamente.
 * **Auto Line Budget / Better Train Boarding:** Mods simples. Apenas a descrição (`IUserMod.Description`) foi interceptada.
 

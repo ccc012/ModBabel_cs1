@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="es">
+  <String key="Mod_Description">¡Libera la máxima eficiencia de los autobuses; ahora también mejora los tranvías!</String>
+  <String key="Express Bus Services: Settings">Express Bus Services: Configuración</String>
+  <String key="EBS Unbunching Mode">Modo Antiaglomeración EBS</String>
+  <String key="Prudential (Legacy)">Prudencial (Legado)</String>
+  <String key="Aggressive">Agresivo</String>
+  <String key="Enable Service Self-Balancing">Activar Autobalanceo de Servicio</String>
+  <String key="Service Self-Balancing can target most-pax middle-of-line stops">El autobalanceo puede apuntar a paradas intermedias con más pasajeros</String>
+  <String key="Enable &quot;minibus behavior&quot; for buses">Activar "comportamiento de microbús" para autobuses</String>
+  <String key="Express Tram Services: Settings">Express Tram Services: Configuración</String>
+  <String key="ETS Unbunching Mode">Modo Antiaglomeración ETS</String>
+  <String key="Disabled">Desactivado</String>
+  <String key="Light Rail Mode">Modo Tren Ligero</String>
+  <String key="True Tram Mode">Modo Tranvía Real</String>
+  <String key="Streetcar Mode">Modo Tranvía Urbano</String>
+  <String key="Express Metro Services: Settings">Express Metro Services: Configuración</String>
+  <String key="EMS Unbunching Mode">Modo Antiaglomeración EMS</String>
+  <String key="Relaxed Schedule (Vanilla)">Horario Relajado (Predeterminado)</String>
+  <String key="Tight Schedule">Horario Ajustado</String>
+</Translations>

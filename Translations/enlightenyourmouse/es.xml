@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="es">
+  <String key="EYM_NAM">EYM: Ilumina tu Ratón</String>
+  <String key="EYM_DESC">Personalización de la iluminación del cursor del ratón por la noche</String>
+  <String key="EYM_OPT_INT">Intensidad de la luz</String>
+  <String key="EYM_OPT_RNG">Alcance máximo de la iluminación</String>
+  <String key="EYM_OPT_COL">Color de la luz</String>
+  <String key="EYM_OPT_RED">Rojo</String>
+  <String key="EYM_OPT_GRN">Verde</String>
+  <String key="EYM_OPT_BLU">Azul</String>
+  <String key="EYM_OPT_DEF">Restaurar valores predeterminados</String>
+  <String key="KEY_TOGGLE">Activar/desactivar la luz</String>
+</Translations>

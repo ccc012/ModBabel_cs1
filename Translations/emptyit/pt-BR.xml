@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Permite automatizar o esvaziamento de edifícios de serviço.</String>
+  <String key="Interval">Intervalo</String>
+  <String key="End of Day">Fim do Dia</String>
+  <String key="End of Month">Fim do Mês</String>
+  <String key="End of Year">Fim do Ano</String>
+  <String key="Every 5 seconds">A cada 5 segundos</String>
+  <String key="Every 10 seconds">A cada 10 segundos</String>
+  <String key="Every 30 seconds">A cada 30 segundos</String>
+  <String key="Warehouses">Armazéns</String>
+  <String key="Empty Warehouses">Esvaziar Armazéns</String>
+  <String key="Upper Threshold (percentage)">Limite Superior (porcentagem)</String>
+  <String key="Stop Emptying Warehouses">Parar de Esvaziar Armazéns</String>
+  <String key="Lower Threshold (percentage)">Limite Inferior (porcentagem)</String>
+  <String key="Landfill Sites">Aterros Sanitários</String>
+  <String key="Empty Landfill Sites">Esvaziar Aterros Sanitários</String>
+  <String key="Stop Emptying Landfill Sites">Parar de Esvaziar Aterros Sanitários</String>
+  <String key="Waste Transfer Facilities">Estações de Transferência de Lixo</String>
+  <String key="Empty Waste Transfer Facilities">Esvaziar Estações de Transferência de Lixo</String>
+  <String key="Stop Emptying Waste Transfer Facilities">Parar de Esvaziar Estações de Transferência de Lixo</String>
+  <String key="Cemeteries">Cemitérios</String>
+  <String key="Empty Cemeteries">Esvaziar Cemitérios</String>
+  <String key="Stop Emptying Cemeteries">Parar de Esvaziar Cemitérios</String>
+  <String key="Snow Dumps">Depósitos de Neve</String>
+  <String key="Empty Snow Dumps">Esvaziar Depósitos de Neve</String>
+  <String key="Stop Emptying Snow Dumps">Parar de Esvaziar Depósitos de Neve</String>
+</Translations>

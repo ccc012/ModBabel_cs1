@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="EYM_NAM">EYM: Ilumine seu Mouse</String>
+  <String key="EYM_DESC">Personalização da iluminação do cursor do mouse à noite</String>
+  <String key="EYM_OPT_INT">Intensidade da luz</String>
+  <String key="EYM_OPT_RNG">Alcance máximo da iluminação</String>
+  <String key="EYM_OPT_COL">Cor da luz</String>
+  <String key="EYM_OPT_RED">Vermelho</String>
+  <String key="EYM_OPT_GRN">Verde</String>
+  <String key="EYM_OPT_BLU">Azul</String>
+  <String key="EYM_OPT_DEF">Restaurar padrões</String>
+  <String key="KEY_TOGGLE">Ligar/desligar a luz</String>
+</Translations>
