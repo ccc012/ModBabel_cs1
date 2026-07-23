@@ -1,4 +1,7 @@
 using System.IO;
+using System.Linq;
+using System.Reflection;
+using ColossalFramework.Plugins;
 
 namespace ModBabel.Core
 {
@@ -32,6 +35,25 @@ namespace ModBabel.Core
                 File.WriteAllText(caminho, idioma);
 
             TranslationEngine.LimparCache();
+            ForcarRecarregamentoDasAbasDeOpcoes();
+        }
+
+        // O Content Manager do CS1 monta a UI de opções de cada mod uma
+        // única vez e reaproveita o painel — só reconstrói quando o
+        // PluginManager avisa que a lista de plugins mudou (isEnabled).
+        // Sem isso, trocar o idioma aqui não atualizava as abas já abertas
+        // do Rainfall (só via desativar/reativar o ModBabel manualmente,
+        // descoberto pelo usuário em 2026-07-23). Replicamos esse toggle
+        // sozinhos para o usuário não precisar fazer isso na mão.
+        private static void ForcarRecarregamentoDasAbasDeOpcoes()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var pluginInfo = PluginManager.instance.FindPluginInfo(assembly);
+            if (pluginInfo == null)
+                return;
+
+            pluginInfo.isEnabled = false;
+            pluginInfo.isEnabled = true;
         }
 
         private static string CaminhoConfig()
