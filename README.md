@@ -65,6 +65,30 @@ tela por tela em jogo (ver status por módulo abaixo).
 | Mod original | Autor | Status | Idiomas |
 |---|---|---|---|
 | [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | pt-BR verificado tela por tela em jogo; demais idiomas são rascunhos ainda não verificados visualmente | 17/17 (ver tabela acima) |
+| [Play It!](https://steamcommunity.com/sharedfiles/filedetails/?id=2741726428) ([código-fonte](https://github.com/keallu/CSL-PlayIt)) | Keallu | feito sem o mod instalado nesta máquina - compila, mas **nunca foi aberto em jogo** | pt-BR apenas (rascunho não verificado) |
+
+### Notas sobre o módulo Play It!
+
+- Diferente do Rainfall, o Play It! não usa o `UIHelper` padrão do jogo
+  pra montar a maior parte da sua UI: ele cria um `UIPanel` próprio do
+  zero (painel flutuante com abas World/Weather/Advanced + relógio
+  flutuante), com todos os textos hardcoded direto no código C#.
+- Como não tem um dicionário/campo interceptável como no Rainfall, a
+  estratégia foi um Postfix genérico que roda depois do método que monta
+  a UI e percorre a árvore de componentes já pronta, traduzindo cada
+  `UILabel`/`UIButton`/tooltip/`UIDropDown.items` encontrado (ver
+  `src/Core/UiTreeTranslator.cs`, reutilizável por futuros módulos com o
+  mesmo padrão de UI customizada).
+- A aba do mod no Content Manager (`ModInfo.OnSettingsUI`) tem textos
+  hardcoded também - ali a solução foi pular o método original (Prefix
+  retornando `false`) e remontar a mesma tela já traduzida.
+- **Feito sem o mod instalado** - a extração de strings foi só por
+  leitura do código-fonte público (aberto, sem licença explícita no
+  repo). Compila com 0 erros, mas nunca foi aberto no jogo. Pendências
+  antes de considerar "verificado": abrir o painel flutuante e a aba do
+  Content Manager em jogo, comparando cada texto.
+- Limitação conhecida: o texto "Game"/"System" do relógio flutuante
+  (alternado com duplo-clique) não foi traduzido nesta versão.
 
 ### Notas sobre o módulo Rainfall
 

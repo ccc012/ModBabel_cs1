@@ -14,6 +14,7 @@ namespace ModBabel.Core
         private static readonly List<IModule> TodosOsModulos = new List<IModule>
         {
             new Modules.Rainfall.RainfallModule(),
+            new Modules.PlayIt.PlayItModule(),
             // new Modules.ModuloExemplo.ModuloExemplo(), // template, não ativar
         };
 
