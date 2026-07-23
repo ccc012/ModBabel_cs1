@@ -40,8 +40,8 @@ namespace ModBabel.Core
             {
                 if (!assembliesCarregadas.Contains(modulo.AssemblyDoModOriginal))
                 {
-                    UnityEngine.Debug.Log(
-                        $"[ModBabel] Módulo '{modulo.ModuloId}' ignorado - " +
+                    Logger.Log(
+                        $"Módulo '{modulo.ModuloId}' ignorado - " +
                         $"mod original '{modulo.AssemblyDoModOriginal}' não está instalado/ativo.");
                     continue;
                 }
@@ -60,12 +60,12 @@ namespace ModBabel.Core
                 try
                 {
                     modulo.AplicarPatches(harmony);
-                    UnityEngine.Debug.Log($"[ModBabel] Módulo '{modulo.ModuloId}' ativado.");
+                    Logger.Log($"Módulo '{modulo.ModuloId}' ativado.");
                 }
                 catch (Exception e)
                 {
-                    UnityEngine.Debug.LogError(
-                        $"[ModBabel] Falha ao ativar o módulo '{modulo.ModuloId}' - " +
+                    Logger.LogErro(
+                        $"Falha ao ativar o módulo '{modulo.ModuloId}' - " +
                         "esse mod específico não será traduzido, mas o restante do " +
                         $"ModBabel e dos outros mods continua funcionando normalmente. Erro: {e}");
                 }

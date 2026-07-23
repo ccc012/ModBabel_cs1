@@ -13,6 +13,8 @@ namespace ModBabel
         {
             HarmonyHelper.DoOnHarmonyReady(() =>
             {
+                Core.Logger.Log("Harmony pronto - ativando módulos.");
+
                 var harmony = new HarmonyLib.Harmony(HarmonyId);
 
                 // Cada módulo só aplica seus patches se o mod original
@@ -26,6 +28,7 @@ namespace ModBabel
             if (HarmonyLib.Harmony.HasAnyPatches(HarmonyId))
             {
                 new HarmonyLib.Harmony(HarmonyId).UnpatchAll(HarmonyId);
+                Core.Logger.Log("Todos os patches removidos (mod desativado).");
             }
         }
     }

@@ -54,6 +54,14 @@ namespace ModBabel
                 indiceAtual < 0 ? 0 : indiceAtual,
                 selecionado => LanguagePreference.Definir(idiomas[selecionado])
             );
+
+            var grupoLog = helper.AddGroup("ModBabel - Diagnóstico");
+
+            grupoLog.AddCheckbox(
+                "Habilitar log detalhado (salva em ModBabel.log, na pasta do mod)",
+                LogPreference.Habilitado(),
+                habilitado => LogPreference.Definir(habilitado)
+            );
         }
     }
 }

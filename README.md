@@ -53,6 +53,13 @@ tela por tela em jogo (ver status por módulo abaixo).
   um arquivo.
 - Você escolhe o idioma preferido na tela de opções do próprio
   ModBabel (Content Manager → Mods → ModBabel → Options).
+- O ModBabel sempre registra suas ações no log padrão do jogo
+  (`Debug.Log`/`Debug.LogError`, o mesmo output_log.txt que qualquer
+  mod usa - nada escondido). Opcionalmente, dá pra ligar "Habilitar log
+  detalhado" na mesma tela de opções, que grava um arquivo próprio
+  (`ModBabel.log`, na pasta do mod) - fica desligado por padrão, só
+  liga se você quiser reportar um bug sem precisar caçar no log gigante
+  do jogo inteiro.
 
 ## Requisitos
 
