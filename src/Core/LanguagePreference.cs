@@ -1,7 +1,4 @@
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using ColossalFramework.Plugins;
 
 namespace ModBabel.Core
 {
@@ -35,25 +32,20 @@ namespace ModBabel.Core
                 File.WriteAllText(caminho, idioma);
 
             TranslationEngine.LimparCache();
-            ForcarRecarregamentoDasAbasDeOpcoes();
-        }
 
-        // O Content Manager do CS1 monta a UI de opções de cada mod uma
-        // única vez e reaproveita o painel — só reconstrói quando o
-        // PluginManager avisa que a lista de plugins mudou (isEnabled).
-        // Sem isso, trocar o idioma aqui não atualizava as abas já abertas
-        // do Rainfall (só via desativar/reativar o ModBabel manualmente,
-        // descoberto pelo usuário em 2026-07-23). Replicamos esse toggle
-        // sozinhos para o usuário não precisar fazer isso na mão.
-        private static void ForcarRecarregamentoDasAbasDeOpcoes()
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-            var pluginInfo = PluginManager.instance.FindPluginInfo(assembly);
-            if (pluginInfo == null)
-                return;
-
-            pluginInfo.isEnabled = false;
-            pluginInfo.isEnabled = true;
+            // TENTATIVA ANTERIOR (revertida em 2026-07-23): forçar
+            // pluginInfo.isEnabled = false/true aqui pra tentar disparar
+            // uma reconstrução automática das abas de opções já abertas
+            // de outros mods. Causava uma travada perceptível (o
+            // PluginManager dispara um evento de "lista de plugins
+            // mudou" que reconstrói a tela de mods inteira do Content
+            // Manager - operação pesada por natureza) e, mesmo assim, o
+            // usuário reportou que o idioma continuava não aplicando.
+            // Sem conseguir testar em jogo nesta máquina, não dá pra
+            // confirmar o mecanismo exato de quando o CS1 reconstrói a
+            // aba de opções de um mod - a forma confiável conhecida é
+            // fechar e reabrir o Content Manager (ver aviso na própria
+            // tela de opções do ModBabel, OnSettingsUI).
         }
 
         private static string CaminhoConfig()
