@@ -41,6 +41,14 @@ namespace ModBabel
         // travada e foi revertida).
         public void OnSettingsUI(UIHelperBase helper)
         {
+            // Botões de apoio ao projeto, no topo da tela (mesmo padrão
+            // usado por outros mods, ex: Move It com "Buy Me A Coffee"/
+            // "Patreon"/"Paypal"). Links ainda são placeholders - ver
+            // Core/SupportLinks.cs.
+            var grupoApoio = helper.AddGroup("ModBabel - Apoie o projeto");
+            grupoApoio.AddButton("Ko-fi", () => UnityEngine.Application.OpenURL(SupportLinks.KoFi));
+            grupoApoio.AddButton("LivePix", () => UnityEngine.Application.OpenURL(SupportLinks.LivePix));
+
             var group = helper.AddGroup(
                 "ModBabel - Idioma (feche e reabra o Content Manager após trocar)");
 
