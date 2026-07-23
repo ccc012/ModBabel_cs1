@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Xml.Linq;
+using System.Xml;
 
 namespace ModBabel.Core
 {
@@ -71,12 +71,21 @@ namespace ModBabel.Core
             if (!File.Exists(caminho))
                 return resultado; // sem arquivo = tudo cai no fallback (texto original)
 
-            var doc = XDocument.Load(caminho);
-            foreach (var el in doc.Descendants("String"))
+            // XmlDocument (DOM clássico) em vez de XDocument/Linq-to-XML:
+            // o build contra net35 chamava XmlReaderSettings
+            // .MaxCharactersFromEntities, membro que não existe no Mono
+            // antigo empacotado com o CS1 - MissingMethodException visto
+            // ao testar no jogo (2026-07-23). XmlDocument não tem essa
+            // dependência e é compatível com o Mono do jogo.
+            var doc = new XmlDocument();
+            doc.Load(caminho);
+
+            var nos = doc.SelectNodes("//String");
+            foreach (XmlNode no in nos)
             {
-                var chave = (string)el.Attribute("key");
-                if (chave != null)
-                    resultado[chave] = el.Value;
+                var chaveAttr = no.Attributes?["key"];
+                if (chaveAttr != null)
+                    resultado[chaveAttr.Value] = no.InnerText;
             }
 
             return resultado;
