@@ -38,6 +38,16 @@ namespace ModBabel.Core
             new Modules.HideCrosswalksRenewed.HideCrosswalksRenewedModule(),
             new Modules.HideUnconnectedTracksRenewed.HideUnconnectedTracksRenewedModule(),
             new Modules.RealisticWinds.RealisticWindsModule(),
+            new Modules.ShowIt.ShowItModule(),
+            new Modules.ToggleIt.ToggleItModule(),
+            new Modules.WatchIt.WatchItModule(),
+            new Modules.OneWayTrainTracks.OneWayTrainTracksModule(),
+            new Modules.PublicTransportUnstucker.PublicTransportUnstuckerModule(),
+            new Modules.RainFirefighting.RainFirefightingModule(),
+            new Modules.SharedStopEnabler.SharedStopEnablerModule(),
+            new Modules.TrafficCongestionReport.TrafficCongestionReportModule(),
+            new Modules.SpecializedIndustryFixRedux.SpecializedIndustryFixReduxModule(),
+            new Modules.MoreDiverseCrowd.MoreDiverseCrowdModule(),
             // new Modules.ModuloExemplo.ModuloExemplo(), // template, não ativar
         };
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="es">
+  <String key="Mod_Description">Permite alternar diferentes elementos visuales en el juego.</String>
+  <String key="Show Panel">Mostrar Panel</String>
+  <String key="Reset Positioning of Panel">Restablecer Posición del Panel</String>
+</Translations>

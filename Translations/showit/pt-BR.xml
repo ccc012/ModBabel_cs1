@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations lang="pt-BR">
+  <String key="Mod_Description">Mostra indicadores vitais para edifícios zoneados.</String>
+  <String key="Alignment">Alinhamento</String>
+  <String key="Right">Direita</String>
+  <String key="Bottom">Inferior</String>
+  <String key="Chart Size">Tamanho do Gráfico</String>
+  <String key="Chart Horizontal Spacing">Espaçamento Horizontal do Gráfico</String>
+  <String key="Chart Vertical Spacing">Espaçamento Vertical do Gráfico</String>
+  <String key="Number Text Scale">Escala do Texto Numérico</String>
+  <String key="Legend">Legenda</String>
+  <String key="Icons">Ícones</String>
+  <String key="Labels">Rótulos</String>
+  <String key="Both">Ambos</String>
+  <String key="Icon Size">Tamanho do Ícone</String>
+  <String key="Label Text Scale">Escala do Texto do Rótulo</String>
+</Translations>

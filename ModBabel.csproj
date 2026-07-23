@@ -11,7 +11,7 @@
          MAJOR (X.Y.Z) - lançamentos
          Atualizar a cada mudança - aparece na tela de opções do mod
          (ModEntryPoint.Name lê isso via Assembly.GetName().Version). -->
-    <Version>1.3.0</Version>
+    <Version>1.4.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

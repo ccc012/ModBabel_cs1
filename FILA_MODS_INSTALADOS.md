@@ -42,47 +42,47 @@ pt-BR - revisitar depois pra adicionar espanhol neles também.
 - [x] Improved Wind Simulation (627096876) — feito, pt-BR + es
 - [x] Intersection Marking Tool (2140418403) — **já tem pt-BR E espanhol nativos** (framework ModsCommon), nada a fazer
 - [x] Lifecycle Rebalance Revisited (2027161563) — **já tem pt-BR E espanhol nativos** (framework AlgernonCommons), nada a fazer
-- [ ] Line Tool (2956939040)
-- [ ] Loading Screen Mod Revisited (2858591409)
-- [ ] More CitizenUnits (2654364627)
-- [ ] More Diverse Crowd (578320825)
-- [ ] More PathUnits (2710657019)
-- [ ] More Simulation Speed Options 2 (3343115359)
-- [ ] More Vehicles Renewed (3684679695)
-- [ ] Motion Blur (3723198486)
-- [ ] Move It (1619685021)
-- [ ] Natural Disasters Renewal (2957578256)
-- [ ] Network Anarchy (2862881785)
-- [ ] Network Multitool (2560782729)
-- [ ] Node Controller Renewal (2472062376)
-- [ ] One-Way Train Tracks (724382534)
-- [ ] Patch Loader Mod (2041457644)
-- [ ] Power Balance (489636701)
-- [ ] Prop Control (2956854293)
-- [ ] Prop Painter: Revisited (2685506044)
-- [ ] Public Transport Unstucker (2774427140)
-- [ ] Rain Firefighting (629370088)
+- [x] Line Tool (2956939040) — **já tem pt-BR E espanhol nativos** (framework algernon-A), nada a fazer
+- [x] Loading Screen Mod Revisited (2858591409) — **já tem pt-BR E espanhol nativos** (algernon-A/LSM-Revisited), nada a fazer
+- [x] More CitizenUnits (2654364627) — **já tem pt-BR E espanhol nativos** (algernon-A/MoreCitizenUnits), nada a fazer
+- [x] More Diverse Crowd (578320825) — feito, pt-BR + es (só descrição)
+- [x] More PathUnits (2710657019) — **já tem pt-BR E espanhol nativos** (algernon-A/MorePathUnits), nada a fazer
+- [ ] More Simulation Speed Options 2 (3343115359) — fonte encontrada (MrUnbelievable92/Cities-Skylines-More-Simulation-Speed-Options-2), ainda não processado
+- [ ] More Vehicles Renewed (3684679695) — fork "Renewed" sem repositório claro identificado (original é dymanoid/MoreVehicles), pendente
+- [x] Motion Blur (3723198486) — **já tem pt-BR E espanhol nativos** (will258012/MotionBlur), nada a fazer
+- [ ] Move It (1619685021) — fonte encontrada (MacSergey/CS-MoveIt, framework ModsCommon), sem pt-BR nem es nativos, ainda não processado (mod grande, requer mais tempo)
+- [ ] Natural Disasters Renewal (2957578256) — código-fonte não encontrado ainda, pendente
+- [ ] Network Anarchy (2862881785) — fonte encontrada (Quboid/NetworkAnarchy), sem pt-BR nem es nativos, ainda não processado
+- [ ] Network Multitool (2560782729) — fonte encontrada (MacSergey/NetworkMultitool, framework ModsCommon), **já tem espanhol nativo**, falta só pt-BR, ainda não processado
+- [ ] Node Controller Renewal (2472062376) — fonte encontrada (MacSergey/NodeController ou NodeController30, framework ModsCommon), **já tem espanhol nativo**, falta só pt-BR, ainda não processado
+- [x] One-Way Train Tracks (724382534) — feito, pt-BR + es (classe real "SingleTrainTrack.Mod")
+- [ ] Patch Loader Mod (2041457644) — código-fonte não encontrado ainda, pendente
+- [ ] Power Balance (489636701) — código-fonte não encontrado ainda, pendente
+- [x] Prop Control (2956854293) — **já tem pt-BR E espanhol nativos**, nada a fazer
+- [ ] Prop Painter: Revisited (2685506044) — fork sem repositório claro identificado (candidatos: Quistar-LAB/PropPainter, CosignCosine/CS-PropPainter), pendente
+- [x] Public Transport Unstucker (2774427140) — feito, pt-BR + es (só descrição)
+- [x] Rain Firefighting (629370088) — feito, pt-BR + es (só descrição)
 - [x] Rainfall (698395457) — feito, 17 idiomas
-- [ ] Real Time (3059406297)
-- [ ] Realistic Population 2 (2025147082)
-- [ ] RON, the network replacer (2405917899)
-- [ ] Roundabout Builder (3569819284)
-- [ ] SharedStopEnabler (2096382380)
-- [ ] Show It! (1556715327)
-- [ ] SingleTrainTrackAI (949504539)
-- [ ] Skyve (2881031511)
-- [ ] Specialized Industry Fix Redux (1553517176)
-- [ ] Stops & Stations (1776052533)
-- [ ] TM:PE - Traffic Manager: President Edition (1637663252)
-- [ ] Toggle It! (1764637396)
-- [ ] Traffic Congestion Report (1651036644)
-- [ ] Traffic Volume (2858654134)
-- [ ] Train Display - Updated (3233229958)
-- [ ] Transport Lines Manager (3007903394)
-- [ ] Unlimited Outside Connections Revisited (2367735356)
-- [ ] Visibility Control (2966894510)
-- [ ] Watch It! Revisited (2863849354)
-- [ ] Zoning Adjuster (2389414419)
+- [ ] Real Time (3059406297) — fonte encontrada (will258012/RealTime), sem pt-BR nem es nativos, ainda não processado
+- [x] Realistic Population 2 (2025147082) — **já tem pt-BR E espanhol nativos**, nada a fazer
+- [x] RON, the network replacer (2405917899) — **já tem pt-BR E espanhol nativos**, nada a fazer
+- [ ] Roundabout Builder (3569819284) — código-fonte não encontrado ainda, pendente
+- [x] SharedStopEnabler (2096382380) — feito, pt-BR + es (classe real "SharedStopEnabler.SharedStops", só descrição)
+- [x] Show It! (1556715327) — feito, pt-BR + es
+- [ ] SingleTrainTrackAI (949504539) — repositório exato não confirmado (candidato: simon56modder), pendente
+- [ ] Skyve (2881031511) — fonte encontrada (t1a2l/Skyve-CS1), mod grande (gerenciador de mods), ainda não processado
+- [x] Specialized Industry Fix Redux (1553517176) — feito, pt-BR + es (só descrição)
+- [ ] Stops & Stations (1776052533) — fonte encontrada (t1a2l/StopsAndStations), sem pt-BR/es nativos confirmados, ainda não processado
+- [ ] TM:PE - Traffic Manager: President Edition (1637663252) — mod muito grande, fork exato instalado não confirmado (CitiesSkylinesMods/TMPE original vs t1a2l/TMPE), requer passada dedicada
+- [x] Toggle It! (1764637396) — feito, pt-BR + es
+- [x] Traffic Congestion Report (1651036644) — feito, pt-BR + es (só descrição)
+- [ ] Traffic Volume (2858654134) — código-fonte não encontrado ainda, pendente
+- [x] Train Display - Updated (3233229958) — **já tem pt-BR E espanhol nativos** (will258012/TrainDisplayUpdated), nada a fazer
+- [ ] Transport Lines Manager (3007903394) — fork exato instalado não confirmado (klyte45/TransportLinesManager vs t1a2l fork), ainda não processado
+- [ ] Unlimited Outside Connections Revisited (2367735356) — fonte encontrada (algernon-A/UnlimitedOutsideConnections-Revisited, framework AlgernonCommons), sem pt-BR/es nativos confirmados, ainda não processado
+- [x] Visibility Control (2966894510) — **já tem pt-BR E espanhol nativos** (algernon-A/VisibilityControl), nada a fazer
+- [x] Watch It! Revisited (2863849354) — feito, pt-BR + es, cobertura completa (~59 chaves) (classe real assembly "WatchItRevisited")
+- [x] Zoning Adjuster (2389414419) — **já tem pt-BR E espanhol nativos** (framework ModsCommon), nada a fazer
 
 Fora da fila (dependências sem tela própria de tradução):
 Harmony (2040656402), Prefab Hook (530771650), UnifiedUI/UUI (2966990700,
