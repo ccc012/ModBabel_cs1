@@ -30,38 +30,41 @@ os textos que cada mod original desenha na interface.
 
 | Mod original | Autor | Status | Idiomas |
 |---|---|---|---|
-| [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | compila sem erros, **não testado no jogo ainda** | pt-BR |
+| [Rainfall](https://steamcommunity.com/sharedfiles/filedetails/?id=698395457) ([código-fonte](https://github.com/yenyang/rainfall)) | [SSU]yenyang | compila, instalado localmente, **aguardando teste em jogo** | pt-BR |
 
 ### Notas sobre o módulo Rainfall
 
-- Mod é open-source (MIT) - strings extraídas direto do código-fonte,
-  sem necessidade de decompilar.
+- Mod é open-source (MIT), mas o build instalado via Steam Workshop foi
+  **decompilado com ilspycmd** para confirmar tudo contra o binário real
+  (o namespace real é `Rainfall`, não `Rainfall.UI` como o código-fonte
+  público no GitHub sugeria - a estrutura interna mudou entre a versão
+  publicada no repo e a instalada).
 - O autor confirmou publicamente (comentários do Workshop) que nunca
   fez localização própria para o mod - confirma a necessidade da
   Rota 2 (Harmony patch).
-- Todas as strings do mod ficam em um único lugar
-  (`Source/UI/OptionHandler.cs`, a tela de opções do mod), o que
-  permitiu uma estratégia mais simples que o template genérico: um
-  único patch que envolve o `UIHelperBase` recebido por
-  `SetUpOptions` num wrapper tradutor (`TranslatingUIHelper`), em vez
-  de um patch por string/painel.
+- **Descoberta importante**: `OptionHandler.SetUpOptions` faz um cast
+  direto do parâmetro `helper` para `UIHelper` concreto (não pela
+  interface) para montar a tabstrip nativa, e cria instâncias de
+  `UIHelper` novas internamente para cada aba. Isso invalidou a primeira
+  tentativa (envolver o `helper` recebido num wrapper tradutor) - a
+  abordagem final intercepta cada `Create(UIHelperBase)` das 5 classes
+  de item de opção (`OptionsCheckbox`, `OptionsDropdown`, `OptionsButton`,
+  `OptionsSlider`, `OptionResetButton`) via reflection (`Traverse`, já
+  que essas classes são `internal` e não são referenciadas em tempo de
+  compilação), e traduz o dicionário estático `fullOptionGroupNames`
+  (nomes completos de grupo/aba) uma única vez. Ver
+  `src/Modules/Rainfall/Patches/`.
 - **Build verificado nesta máquina** (2026-07-23): `dotnet build` compila
-  com 0 erros/0 avisos contra o `ICities.dll`/`ColossalManaged.dll`/
-  `Assembly-CSharp.dll`/`UnityEngine.dll` reais da instalação local do
-  CS1. A assinatura de `ICities.UIHelperBase` foi confirmada por
-  reflection contra a DLL instalada (bate com o que o `TranslatingUIHelper`
-  espera - não tem membro `self`, os outros métodos batem exatamente).
-- Pendências conhecidas antes de considerar "testado no jogo":
-  - Confirmar no dnSpy (contra a `.dll` do Rainfall instalada) que
-    `Rainfall.UI.OptionHandler.SetUpOptions` é o nome/assinatura real
-    (extraído do código-fonte público, pode ter mudado em alguma
-    atualização não sincronizada com o GitHub) - não pôde ser
-    verificado aqui porque o mod Rainfall não está instalado nesta
-    máquina
-  - O botão "Reset [nome do grupo]" usa um texto montado
-    dinamicamente por grupo - ainda não capturado no XML de tradução
-  - Rodar o checklist completo de `07_TESTES_ESTRATEGIA.md` (vault)
-    (requer ter o mod Rainfall + Harmony instalados e o jogo aberto)
+  com 0 erros/0 avisos, e a DLL + traduções já foram copiadas para
+  `%LOCALAPPDATA%\Colossal Order\Cities_Skylines\Addons\Mods\ModBabel\`.
+- Pendências conhecidas / limitações assumidas:
+  - Mensagens do Chirper (avisos de previsão do tempo, tipo "it's
+    raining" etc.) usam grandes listas de frases aleatórias
+    (`mildQuotes`, `normalQuotes`, `heavyQuotes`, `extremeQuotes`) em
+    outro arquivo - **fora do escopo desta primeira versão**, só a tela
+    de Opções do mod foi traduzida
+  - Rodar o checklist completo de `07_TESTES_ESTRATEGIA.md` (vault) -
+    isso só pode ser feito abrindo o jogo de verdade
 
 ## Como compilar
 

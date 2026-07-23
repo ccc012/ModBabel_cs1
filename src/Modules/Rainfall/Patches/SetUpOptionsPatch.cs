@@ -1,39 +1,49 @@
+using System.Collections.Generic;
+using System.Reflection;
 using HarmonyLib;
-using ICities;
+using ModBabel.Core;
 
 namespace ModBabel.Modules.Rainfall.Patches
 {
-    // Estratégia usada para este mod (diferente do padrão "Prefix/Postfix
-    // trocando um label específico" do template genérico): como TODAS as
-    // strings do Rainfall são passadas como argumento literal para os
-    // métodos Add* de UIHelperBase dentro de um único método
-    // (OptionHandler.SetUpOptions), a forma mais robusta de traduzir é
-    // substituir o próprio "helper" por um wrapper que intercepta cada
-    // chamada Add* e traduz o texto antes de repassar para o helper real.
+    // Traduz o dicionário estático Rainfall.OptionHandler.fullOptionGroupNames
+    // (nome completo de cada grupo/aba de opções - ex: "GEN1" ->
+    // "General Settings 1"). Esse dicionário alimenta 3 lugares ao mesmo
+    // tempo dentro de SetUpOptions: o tooltip da aba, o texto do grupo
+    // passado a helper.AddGroup(...), e a base do texto do botão
+    // "Reset <nome>". Traduzir o dicionário uma vez, antes do método
+    // original rodar, resolve os 3 de uma vez.
     //
-    // Alvo real: Rainfall.UI.OptionHandler.SetUpOptions(UIHelperBase)
-    // (nome de classe/método a confirmar exatamente no dnSpy contra a
-    // versão instalada - o código-fonte público mostra essa assinatura,
-    // mas o autor pode ter renomeado em alguma atualização)
+    // Confirmado por decompilação da Rainfall.dll instalada (2026-07-23):
+    // Rainfall.OptionHandler.SetUpOptions(UIHelperBase) existe com esse
+    // nome e assinatura exatos; fullOptionGroupNames é
+    // "private static Dictionary<string, string>".
     [HarmonyPatch]
     public static class SetUpOptionsPatch
     {
-        // MethodBase alvo resolvido dinamicamente (em vez de
-        // typeof(Rainfall.UI.OptionHandler) direto) porque este projeto
-        // não referencia a DLL do mod original em tempo de compilação -
-        // ver 06_TEMPLATE_HARMONY_PATCH.md (vault) sobre essa opção.
-        static System.Reflection.MethodBase TargetMethod()
+        private static bool _traduzido;
+
+        static MethodBase TargetMethod()
         {
-            var tipoOriginal = AccessTools.TypeByName("Rainfall.UI.OptionHandler");
+            var tipoOriginal = AccessTools.TypeByName("Rainfall.OptionHandler");
             return AccessTools.Method(tipoOriginal, "SetUpOptions");
         }
 
         [HarmonyPrefix]
-        public static bool Prefix(ref UIHelperBase helper)
+        public static void Prefix()
         {
-            helper = new TranslatingUIHelper(helper, "rainfall");
-            return true; // deixa o método original rodar, agora usando
-                          // nosso helper "tradutor" no lugar do real
+            if (_traduzido) return; // dicionário estático - só precisa traduzir 1 vez
+            _traduzido = true;
+
+            var tipoOriginal = AccessTools.TypeByName("Rainfall.OptionHandler");
+            var campo = AccessTools.Field(tipoOriginal, "fullOptionGroupNames");
+            var dicionario = (Dictionary<string, string>)campo.GetValue(null);
+
+            var chaves = new List<string>(dicionario.Keys);
+            foreach (var chave in chaves)
+            {
+                dicionario[chave] = TranslationEngine.Traduzir(
+                    "rainfall", dicionario[chave], dicionario[chave]);
+            }
         }
     }
 }
